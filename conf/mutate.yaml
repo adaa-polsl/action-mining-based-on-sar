@@ -1,0 +1,21 @@
+experiment_name: test
+dataset: cancer
+method: est
+test: True
+target: any
+model: gbsa
+fold: 0
+ruleset: ruleset_1
+random_state: 42
+
+defaults:
+  - _self_
+  - paths: default.yaml
+  - hydra: default.yaml
+  - override hydra/launcher: joblib
+
+task_name: "mutate"
+
+hydra:
+  launcher:
+    n_jobs: 1
