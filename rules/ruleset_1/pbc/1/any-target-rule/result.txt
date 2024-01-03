@@ -1,0 +1,23 @@
+Dataset: pbc/1/train.arff
+Number of examples: 376
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 6
+Number of rules without any action in premise: 0
+Conditions count: 16
+Actions count: 16
+"Any" actions count: 3
+Averege conditions per rule: 2.6666666666666665
+Averege actions per rule: 2.6666666666666665
+Percent of examples covered by left and right rules: 57.45
+Percent of examples covered by left rule: 93.35
+Percent of examples covered by right rule: 64.10
+
+Rules:
+r1: IF (albumin, (-inf, 3.725) -> <3.0149999999999997, 4.390000000000001)) AND (platelet, (-inf, 496.5) -> ANY) AND (bili, <2.3499999999999996, inf) -> (-inf, 1.75)) AND (age, <43.2402465, 74.67351149999999) -> (-inf, 66.1218345)) AND (protime, <10.95, inf) -> ANY) THEN (survival_status = {NaN})
+r2: IF (albumin, (-inf, 3.8449999999999998) -> <3.0149999999999997, inf)) AND (bili, <2.25, inf) -> (-inf, 1.75)) AND (age, <45.4223135, 72.23271700000001) -> (-inf, 66.1218345)) AND (protime, <9.95, inf) -> ANY) THEN (survival_status = {NaN})
+r3: IF (albumin, (-inf, 4.140000000000001) -> <3.0149999999999997, inf)) AND (bili, <2.25, inf) -> (-inf, 1.75)) AND (age, <41.084188999999995, inf) -> (-inf, 66.1218345)) THEN (survival_status = {NaN})
+r4: IF (bili, <2.1500000000000004, inf) -> (-inf, 1.75)) AND (age, <29.9151265, inf) -> (-inf, 66.1218345)) THEN (survival_status = {NaN})
+r5: IF (bili, <1.75, inf) -> (-inf, 1.75)) THEN (survival_status = {NaN})
+r6: IF (bili, (-inf, 1.35) -> <8.8, inf)) THEN (survival_status = {NaN})

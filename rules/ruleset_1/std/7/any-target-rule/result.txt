@@ -1,0 +1,31 @@
+Dataset: std/7/train.arff
+Number of examples: 790
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 14
+Number of rules without any action in premise: 0
+Conditions count: 78
+Actions count: 66
+"Any" actions count: 35
+Averege conditions per rule: 5.571428571428571
+Averege actions per rule: 4.714285714285714
+Percent of examples covered by left and right rules: 91.77
+Percent of examples covered by left rule: 94.68
+Percent of examples covered by right rule: 96.46
+
+Rules:
+r1: IF (dchexam, <0.5, inf) -> <0.5, inf)) AND (lymph, (-inf, 0.5) -> ANY) AND (npartner, <0.5, 2.5) -> <0.5, 4.0)) AND (os12m, (-inf, 0.5) -> ANY) AND (age, (-inf, 16.5) -> <18.5, 25.0)) AND (yschool, (-inf, 9.5) -> ANY) AND (condom, <1.5, 2.5) -> ANY) THEN (survival_status = {NaN})
+r2: IF (rash, (-inf, 0.5) -> (-inf, 0.5)) AND (iinfct, (-inf, 2.5) -> <1.5, inf)) AND (marital, {S} -> ANY) AND (lymph, (-inf, 0.5) -> (-inf, 0.5)) AND (npartner, <0.5, 2.5) -> <0.5, 4.0)) AND (dysuria, (-inf, 0.5) -> (-inf, 0.5)) AND (os12m, (-inf, 0.5) -> ANY) AND (yschool, (-inf, 11.5) -> <11.5, inf)) AND (lesion, (-inf, 0.5) -> ANY) AND (condom, (-inf, 2.5) -> ANY) THEN (survival_status = {NaN})
+r3: IF (marital, {S} -> ANY) AND (rash, (-inf, 0.5) -> ANY) AND (npartner, <0.5, inf) -> ANY) AND (os12m, (-inf, 0.5) -> <0.5, inf)) AND (abnode, (-inf, 0.5) -> (-inf, 0.5)) AND (yschool, (-inf, 12.5) -> ANY) AND (lesion, (-inf, 0.5) -> ANY) AND (condom, <1.5, 2.5) -> ANY) THEN (survival_status = {NaN})
+r4: IF (os12m, (-inf, 0.5) -> <0.5, inf)) AND (age, (-inf, 17.5) -> ANY) AND (condom, (-inf, 2.5) -> ANY) THEN (survival_status = {NaN})
+r5: IF (rash, (-inf, 0.5) -> ANY) AND (npartner, <0.5, inf) -> (-inf, 14.5)) AND (os12m, (-inf, 0.5) -> <0.5, inf)) AND (age, (-inf, 17.5) -> ANY) THEN (survival_status = {NaN})
+r6: IF (marital, {S} -> ANY) AND (rash, (-inf, 0.5) -> ANY) AND (npartner, <0.5, 4.0) -> <0.5, 1.5)) AND (age, (-inf, 17.5) -> <18.5, inf)) THEN (survival_status = {NaN})
+r7: IF (rash, (-inf, 0.5) -> (-inf, 0.5)) AND (iinfct, <1.5, inf) -> ANY) AND (vagina, (-inf, 0.5) -> ANY) AND (npartner, <0.5, inf) -> <0.5, inf)) AND (abdpain, (-inf, 0.5) -> ANY) AND (os12m, <0.5, inf) -> (-inf, 0.5)) AND (abnode, (-inf, 0.5) -> (-inf, 0.5)) AND (age, (-inf, 44.5) -> (-inf, 16.5)) THEN (survival_status = {NaN})
+r8: IF (rash, (-inf, 0.5) -> (-inf, 0.5)) AND (npartner, <0.5, inf) -> <0.5, inf)) AND (abdpain, (-inf, 0.5) -> ANY) AND (dysuria, (-inf, 0.5) -> ANY) AND (os12m, <0.5, inf) -> (-inf, 0.5)) THEN (survival_status = {NaN})
+r9: IF (iinfct, <1.5, inf) -> (-inf, 1.5)) AND (npartner, (-inf, 12.5) -> ANY) AND (os12m, <0.5, inf) -> (-inf, 0.5)) AND (abnode, (-inf, 0.5) -> (-inf, 0.5)) AND (age, <16.5, inf) -> (-inf, 18.5)) AND (yschool, <9.5, inf) -> ANY) AND (lesion, (-inf, 0.5) -> ANY) THEN (survival_status = {NaN})
+r10: IF (marital, {S} -> ANY) AND (rash, (-inf, 0.5) -> ANY) AND (os12m, (-inf, 0.5) -> <0.5, inf)) AND (age, (-inf, 18.5) -> ANY) THEN (survival_status = {NaN})
+r11: IF (rs12m, (-inf, 0.5) -> ANY) AND (iinfct, <1.5, inf) -> ANY) AND (vagina, (-inf, 0.5) -> <0.5, inf)) AND (npartner, <0.5, 2.5) -> (-inf, 2.5)) AND (yschool, <9.5, inf) -> (-inf, 12.5)) AND (age, (-inf, 37.0) -> (-inf, 30.5)) AND (condom, <2.5, inf) -> (-inf, 2.5)) THEN (survival_status = {NaN})
+r12: IF (vagina, (-inf, 0.5) -> <0.5, inf)) AND (npartner, (-inf, 2.5) -> (-inf, 2.5)) AND (yschool, <9.5, inf) -> (-inf, 12.5)) AND (condom, <2.5, inf) -> (-inf, 2.5)) THEN (survival_status = {NaN})
+r13: IF (iinfct, <1.5, inf) -> ANY) AND (npartner, (-inf, 2.0) -> (-inf, 1.5)) AND (yschool, <12.5, inf) -> (-inf, 9.5)) AND (age, (-inf, 26.0) -> (-inf, 19.0)) THEN (survival_status = {NaN})
+r14: IF (vagina, (-inf, 0.5) -> ANY) AND (npartner, (-inf, 2.5) -> (-inf, 4.5)) AND (age, <19.5, inf) -> (-inf, 17.5)) THEN (survival_status = {NaN})

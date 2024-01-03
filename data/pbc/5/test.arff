@@ -1,0 +1,137 @@
+% pbc {survival}
+%
+% The first six rows:
+%
+%   id time status trt      age sex ascites hepato spiders edema bili chol albumin copper
+% 1  1  400      2   1 58.76523   f       1      1       1   1.0 14.5  261    2.60    156
+% 2  2 4500      0   1 56.44627   f       0      1       1   0.0  1.1  302    4.14     54
+% 3  3 1012      2   1 70.07255   m       0      0       0   0.5  1.4  176    3.48    210
+% 4  4 1925      2   1 54.74059   f       0      1       1   0.5  1.8  244    2.54     64
+% 5  5 1504      1   2 38.10541   f       0      1       1   0.0  3.4  279    3.53    143
+% 6  6 2503      2   2 66.25873   f       0      1       0   0.0  0.8  248    3.98     50
+%   alk.phos    ast trig platelet protime stage
+% 1   1718.0 137.95  172      190    12.2     4
+% 2   7394.8 113.52   88      221    10.6     3
+% 3    516.0  96.10   55      151    12.0     4
+% 4   6121.8  60.63   92      183    10.3     4
+% 5    671.0 113.15   72      136    10.9     3
+% 6    944.0  93.00   63       NA    11.0     3
+%
+% Description:
+% 
+%      D This data is from the Mayo Clinic trial in primary biliary
+%      cirrhosis (PBC) of the liver conducted between 1974 and 1984.  A
+%      total of 424 PBC patients, referred to Mayo Clinic during that
+%      ten-year interval, met eligibility criteria for the randomized
+%      placebo controlled trial of the drug D-penicillamine.  The first
+%      312 cases in the data set participated in the randomized trial and
+%      contain largely complete data.  The additional 112 cases did not
+%      participate in the clinical trial, but consented to have basic
+%      measurements recorded and to be followed for survival.  Six of
+%      those cases were lost to follow-up shortly after diagnosis, so the
+%      data here are on an additional 106 cases as well as the 312
+%      randomized participants.
+% 
+%      A nearly identical data set found in appendix D of Fleming and
+%      Harrington; this version has fewer missing values.
+% 
+% Usage:
+% 
+%      pbc
+%      
+% Format:
+% 
+%        age:       in years                                                      
+%        albumin:   serum albumin (g/dl)                                          
+%        alk.phos:  alkaline phosphotase (U/liter)                                
+%        ascites:   presence of ascites                                           
+%        ast:       aspartate aminotransferase, once called SGOT (U/ml)           
+%        bili:      serum bilirunbin (mg/dl)                                      
+%        chol:      serum cholesterol (mg/dl)                                     
+%        copper:    urine copper (ug/day)                                         
+%        edema:     0 no edema, 0.5 untreated or successfully treated             
+%                   1 edema despite diuretic therapy                              
+%        hepato:    presence of hepatomegaly or enlarged liver                    
+%        id (deleted):        case number                                                   
+%        platelet:  platelet count                                                
+%        protime:   standardised blood clotting time                              
+%        sex:       m/f                                                           
+%        spiders:   blood vessel malformations in the skin                        
+%        stage:     histologic stage of disease (needs biopsy)                    
+%        survival_status (previously status):    status at endpoint, 0 for censored or transplant, 1 for dead      
+%        surival_time (previously time):      number of days between registration and the earlier of death, 
+%                   transplantion, or study analysis in July, 1986                
+%        trt:       1/2/NA for D-penicillmain, placebo, not randomised            
+%        trig:      triglycerides (mg/dl)                                         
+%       
+% Source:
+% 
+%      T Therneau and P Grambsch (2000), _Modeling Survival Data:
+%      Extending the Cox Model_, Springer-Verlag, New York.  ISBN:
+%      0-387-98784-3.
+%
+@relation pbc
+
+@attribute survival_time numeric
+@attribute survival_status numeric
+@attribute trt numeric
+@attribute age numeric
+@attribute sex {f,m}
+@attribute ascites numeric
+@attribute hepato numeric
+@attribute spiders numeric
+@attribute edema numeric
+@attribute bili numeric
+@attribute chol numeric
+@attribute albumin numeric
+@attribute copper numeric
+@attribute alk.phos numeric
+@attribute ast numeric
+@attribute trig numeric
+@attribute platelet numeric
+@attribute protime numeric
+@attribute stage numeric
+
+@data
+2466.0,1.0,2.0,53.05681,f,0.0,0.0,0.0,0.0,0.3,280.0,4.0,52.0,4651.2,28.38,189.0,373.0,11.0,3.0
+769.0,1.0,2.0,52.183436,f,0.0,1.0,0.0,0.0,2.7,274.0,3.15,159.0,1533.0,117.8,128.0,224.0,10.5,4.0
+3445.0,0.0,2.0,64.188912,m,0.0,1.0,1.0,0.0,0.6,252.0,3.83,41.0,843.0,65.1,83.0,336.0,11.4,4.0
+4453.0,0.0,2.0,33.69473,f,0.0,1.0,1.0,0.0,2.1,?,3.54,122.0,8778.0,56.76,?,344.0,11.0,4.0
+2224.0,1.0,1.0,40.394251,f,0.0,1.0,1.0,0.0,0.8,329.0,3.5,49.0,7622.8,126.42,124.0,321.0,10.6,3.0
+1487.0,1.0,2.0,62.907598,f,0.0,1.0,0.0,0.0,2.1,373.0,3.5,52.0,1009.0,150.35,188.0,178.0,11.0,3.0
+4191.0,1.0,1.0,46.453114,m,0.0,1.0,0.0,0.0,1.4,427.0,3.7,105.0,1909.0,182.9,171.0,123.0,11.0,3.0
+1827.0,1.0,1.0,51.920602,f,0.0,1.0,1.0,0.0,8.4,558.0,3.99,280.0,967.0,89.9,309.0,278.0,11.0,4.0
+3574.0,1.0,1.0,67.310062,f,0.0,0.0,0.0,0.0,4.5,472.0,4.09,154.0,1580.0,117.8,272.0,412.0,11.1,3.0
+2452.0,0.0,2.0,41.393566,f,0.0,0.0,0.0,0.5,0.6,296.0,4.06,37.0,1032.0,80.6,83.0,442.0,12.0,3.0
+3222.0,1.0,1.0,68.50924,f,1.0,1.0,0.0,0.0,2.1,?,3.9,50.0,1087.0,103.85,?,137.0,10.6,2.0
+3336.0,0.0,1.0,61.0705,f,0.0,0.0,1.0,0.5,3.0,458.0,3.63,74.0,1588.0,106.95,382.0,438.0,9.9,3.0
+2288.0,1.0,1.0,48.854209,f,0.0,1.0,0.0,0.0,3.5,390.0,3.3,67.0,878.0,137.95,93.0,207.0,10.2,3.0
+3069.0,0.0,1.0,52.889802,m,0.0,1.0,0.0,0.0,0.6,251.0,3.9,25.0,681.0,57.35,107.0,182.0,10.8,4.0
+3149.0,0.0,2.0,42.335387,f,0.0,0.0,0.0,0.0,0.7,578.0,3.67,35.0,1353.0,127.1,105.0,427.0,10.7,2.0
+1297.0,1.0,1.0,51.249829,m,0.0,1.0,0.0,0.0,7.3,426.0,3.93,262.0,2424.0,145.7,218.0,252.0,10.5,3.0
+2666.0,0.0,2.0,43.556468,f,0.0,1.0,1.0,0.5,0.6,220.0,3.35,57.0,1620.0,153.45,80.0,311.0,11.2,4.0
+2644.0,0.0,1.0,55.56742,f,0.0,0.0,0.0,0.0,0.5,?,3.85,63.0,663.0,79.05,?,311.0,9.7,1.0
+2456.0,0.0,2.0,50.647502,f,0.0,1.0,0.0,0.0,1.3,360.0,3.63,52.0,1812.0,97.65,164.0,256.0,9.9,3.0
+999.0,1.0,1.0,58.951403,m,0.0,0.0,0.0,0.0,2.3,316.0,3.35,172.0,1601.0,179.8,63.0,394.0,9.7,2.0
+348.0,1.0,1.0,62.414784,f,1.0,1.0,0.0,0.5,4.5,191.0,3.05,200.0,1020.0,175.15,118.0,139.0,11.4,4.0
+1979.0,0.0,2.0,34.609172,f,0.0,1.0,1.0,0.0,3.3,302.0,3.41,51.0,310.0,83.7,44.0,95.0,11.5,4.0
+930.0,1.0,2.0,67.488022,f,0.0,1.0,0.0,0.0,8.0,468.0,2.81,139.0,2009.0,198.4,139.0,233.0,10.0,4.0
+1783.0,0.0,1.0,47.980835,f,0.0,0.0,1.0,0.0,1.3,242.0,3.2,35.0,1556.0,175.15,71.0,195.0,10.6,4.0
+1769.0,0.0,2.0,40.791239,f,0.0,1.0,0.0,0.0,0.6,299.0,3.36,23.0,2769.0,220.1,85.0,303.0,10.9,4.0
+1656.0,0.0,2.0,74.524298,m,0.0,1.0,0.0,0.0,5.6,232.0,3.59,188.0,1120.0,98.0,128.0,248.0,10.9,4.0
+1301.0,0.0,2.0,34.874743,f,0.0,1.0,1.0,0.5,1.1,432.0,3.57,45.0,1406.0,190.0,77.0,248.0,11.4,4.0
+1434.0,0.0,2.0,35.088296,f,0.0,0.0,0.0,0.5,1.0,317.0,3.56,44.0,1636.0,84.0,111.0,394.0,9.8,3.0
+1302.0,0.0,1.0,60.536619,m,0.0,1.0,0.0,0.0,6.6,1000.0,3.07,88.0,3150.0,193.0,133.0,299.0,10.9,4.0
+1295.0,0.0,2.0,45.21013,f,0.0,0.0,0.0,0.0,1.0,393.0,3.57,50.0,1307.0,74.0,103.0,295.0,10.5,4.0
+1271.0,0.0,1.0,37.798768,f,0.0,0.0,0.0,0.0,0.7,335.0,3.95,43.0,657.0,52.0,104.0,268.0,10.6,2.0
+1153.0,0.0,1.0,61.182752,f,0.0,1.0,0.0,0.0,0.4,246.0,3.58,24.0,797.0,91.0,113.0,288.0,10.4,2.0
+3523.0,0.0,?,40.0,f,?,?,?,0.0,0.6,?,4.04,?,?,?,?,130.0,11.2,2.0
+111.0,1.0,?,54.001369,f,?,?,?,0.0,9.0,?,3.29,?,?,?,?,286.0,13.1,4.0
+2855.0,0.0,?,54.001369,f,?,?,?,0.0,1.4,?,3.82,?,?,?,?,249.0,10.3,2.0
+2716.0,0.0,?,52.999316,f,?,?,?,0.0,0.6,?,4.19,?,?,?,?,330.0,9.9,1.0
+1095.0,1.0,?,50.001369,f,?,?,?,0.0,16.0,?,3.36,?,?,?,?,384.0,10.0,3.0
+1347.0,0.0,?,52.0,f,?,?,?,0.0,1.7,?,3.24,?,?,?,?,231.0,10.5,3.0
+1635.0,0.0,?,55.000684,f,?,?,?,0.0,0.7,?,2.93,?,?,?,?,209.0,10.6,3.0
+1654.0,0.0,?,54.001369,m,?,?,?,0.0,1.7,?,2.38,?,?,?,?,166.0,9.8,3.0
+703.0,1.0,?,46.001369,f,?,?,?,0.0,4.5,?,2.68,?,?,?,?,219.0,11.5,4.0
+976.0,0.0,?,52.999316,f,?,?,?,0.0,0.7,?,3.29,?,?,?,?,350.0,10.6,4.0

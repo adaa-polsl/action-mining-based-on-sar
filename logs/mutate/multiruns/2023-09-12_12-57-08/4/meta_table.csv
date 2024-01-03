@@ -1,0 +1,19 @@
+attribute,value
+PLTrecovery,"(-inf, 21.5>"
+PLTrecovery,"(21.5, 26.0>"
+PLTrecovery,"(26.0, 500142.5>"
+PLTrecovery,"(500142.5, inf)"
+CD34kgx10d6,"(-inf, 0.8049999999999999>"
+CD34kgx10d6,"(0.8049999999999999, 1.54>"
+CD34kgx10d6,"(1.54, 6.5>"
+CD34kgx10d6,"(6.5, 8.68>"
+CD34kgx10d6,"(8.68, 11.395>"
+CD34kgx10d6,"(11.395, 11.885>"
+CD34kgx10d6,"(11.885, 41.515>"
+CD34kgx10d6,"(41.515, inf)"
+Recipientage,"(-inf, 1.0>"
+Recipientage,"(1.0, 14.05>"
+Recipientage,"(14.05, 18.950000000000003>"
+Recipientage,"(18.950000000000003, inf)"
+extcGvHD,{1}
+RecipientRh,{1}

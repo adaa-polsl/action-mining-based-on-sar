@@ -1,0 +1,25 @@
+Dataset: zinc/1/train.arff
+Number of examples: 278
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 8
+Number of rules without any action in premise: 0
+Conditions count: 24
+Actions count: 22
+"Any" actions count: 13
+Averege conditions per rule: 3.0
+Averege actions per rule: 2.75
+Percent of examples covered by left and right rules: 88.85
+Percent of examples covered by left rule: 91.01
+Percent of examples covered by right rule: 97.84
+
+Rules:
+r1: IF (dysp1, <1.5, inf) -> (-inf, 1.5)) AND (sex, {Male} -> ANY) AND (agepill, <40.0, inf) -> ANY) THEN (survival_status = {NaN})
+r2: IF (dysp1, <1.5, inf) -> (-inf, 1.5)) AND (agepill, <43.5, inf) -> ANY) AND (stdagepill, (-inf, 0.6363639999999999) -> ANY) AND (drink, {Never} -> ANY) THEN (survival_status = {NaN})
+r3: IF (moddysp, {Worst isn't moderate} -> {Worst isn't moderate}) AND (sex, {Male} -> {Female}) AND (smoke, {Ever} -> ANY) AND (stdagepill, (-inf, 1.7272729999999998) -> ANY) THEN (survival_status = {NaN})
+r4: IF (moddysp, {Worst isn't moderate} -> {Worst isn't moderate}) AND (sex, {Male} -> {Female}) AND (stdagepill, (-inf, 1.909091) -> (-inf, -0.6363639999999999)) THEN (survival_status = {NaN})
+r5: IF (sex, {Female} -> ANY) AND (smoke, {Never} -> {Ever}) AND (stdagepill, (-inf, -1.7272729999999998) -> ANY) THEN (survival_status = {NaN})
+r6: IF (agepill, (-inf, 49.5) -> ANY) AND (basehist, {Normal} -> {Esophagitis}) THEN (survival_status = {NaN})
+r7: IF (sevdysp, {Worst isn't severe} -> ANY) AND (agepill, <56.5, inf) -> (-inf, 43.5)) AND (stdagepill, (-inf, 1.7272729999999998) -> ANY) THEN (survival_status = {NaN})
+r8: IF (sevdysp, {Worst isn't severe} -> ANY) AND (agepill, <53.5, 67.5) -> (-inf, 43.5)) THEN (survival_status = {NaN})

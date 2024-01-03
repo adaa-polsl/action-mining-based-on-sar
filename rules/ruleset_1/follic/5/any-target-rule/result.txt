@@ -1,0 +1,24 @@
+Dataset: follic/5/train.arff
+Number of examples: 487
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 7
+Number of rules without any action in premise: 0
+Conditions count: 13
+Actions count: 13
+"Any" actions count: 4
+Averege conditions per rule: 1.8571428571428572
+Averege actions per rule: 1.8571428571428572
+Percent of examples covered by left and right rules: 45.38
+Percent of examples covered by left rule: 93.63
+Percent of examples covered by right rule: 46.61
+
+Rules:
+r1: IF (hgb, (-inf, 160.5) -> ANY) AND (age, (-inf, 42.2) -> <68.95, inf)) THEN (survival_status = {NaN})
+r2: IF (hgb, (-inf, 160.5) -> ANY) AND (age, (-inf, 46.95) -> <66.95, inf)) THEN (survival_status = {NaN})
+r3: IF (hgb, (-inf, 163.5) -> ANY) AND (age, (-inf, 56.75) -> <66.95, inf)) THEN (survival_status = {NaN})
+r4: IF (clinstg, <1.5, inf) -> ANY) AND (age, <59.65, inf) -> <18.75, 43.6)) THEN (survival_status = {NaN})
+r5: IF (hgb, (-inf, 154.0) -> (-inf, 160.5)) AND (age, <62.95, inf) -> (-inf, 43.6)) THEN (survival_status = {NaN})
+r6: IF (hgb, (-inf, 155.5) -> (-inf, 160.5)) AND (age, <59.95, inf) -> (-inf, 43.6)) THEN (survival_status = {NaN})
+r7: IF (age, <58.85, inf) -> (-inf, 43.6)) THEN (survival_status = {NaN})

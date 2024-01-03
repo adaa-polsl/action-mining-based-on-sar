@@ -1,0 +1,26 @@
+Dataset: lung/1/train.arff
+Number of examples: 928
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 9
+Number of rules without any action in premise: 0
+Conditions count: 25
+Actions count: 24
+"Any" actions count: 3
+Averege conditions per rule: 2.7777777777777777
+Averege actions per rule: 2.6666666666666665
+Percent of examples covered by left and right rules: 92.24
+Percent of examples covered by left rule: 94.72
+Percent of examples covered by right rule: 97.20
+
+Rules:
+r1: IF (Stage1, (-inf, 2.5) -> <2.5, inf)) AND (Operated, {1} -> {0}) AND (Stage3, (-inf, 0.5) -> ANY) AND (Cell_Type, (-inf, 2.5) -> (-inf, 3.5)) THEN (survival_status = {NaN})
+r2: IF (Stage1, (-inf, 2.5) -> <2.5, inf)) AND (Operated, {1} -> {0}) AND (Cell_Type, (-inf, 2.5) -> (-inf, 3.5)) THEN (survival_status = {NaN})
+r3: IF (Stage1, (-inf, 2.5) -> <2.5, inf)) AND (Stage3, (-inf, 0.5) -> ANY) AND (Cell_Type, (-inf, 2.5) -> (-inf, 3.5)) THEN (survival_status = {NaN})
+r4: IF (Stage1, (-inf, 2.5) -> <2.5, inf)) THEN (survival_status = {NaN})
+r5: IF (Operated, {0} -> {1}) AND (Stage3, <0.5, inf) -> (-inf, 0.5)) AND (Cell_Type, (-inf, 3.5) -> (-inf, 2.5)) THEN (survival_status = {NaN})
+r6: IF (Operated, {0} -> {1}) AND (Cell_Type, (-inf, 3.5) -> (-inf, 2.5)) AND (Means_of_Detection, <0.5, inf) -> ANY) THEN (survival_status = {NaN})
+r7: IF (Stage3, (-inf, 0.5) -> <1.5, inf)) AND (Cell_Type, (-inf, 3.5) -> (-inf, 3.5)) THEN (survival_status = {NaN})
+r8: IF (Stage2, <1.5, inf) -> (-inf, 2.5)) AND (Stage3, <0.5, inf) -> (-inf, 0.5)) AND (Cell_Type, <0.5, inf) -> (-inf, 1.5)) AND (Means_of_Detection, <0.5, inf) -> (-inf, 1.5)) THEN (survival_status = {NaN})
+r9: IF (Stage2, <1.5, inf) -> (-inf, 2.5)) AND (Stage3, <0.5, inf) -> (-inf, 0.5)) THEN (survival_status = {NaN})

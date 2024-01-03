@@ -1,0 +1,5 @@
+- fold=4
+- model=csa
+- dataset=follic
+- method=km
+- tags=[2023-09-12]

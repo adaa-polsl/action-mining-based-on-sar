@@ -1,0 +1,126 @@
+% NAME: 
+% Worcester Heart Attack Study WHAS500 Data (whas500.dat)
+% 
+% SIZE: 
+% 500 Observations, 22 variables
+% 
+% SOURCE: 
+% Worcester Heart Attack Study data from Dr. Robert J. Goldberg of 
+% the Department of Cardiology at the University of Massachusetts Medical 
+% School. 
+% 
+% REFERENCE:
+% Hosmer, D.W. and Lemeshow, S. and May, S. (2008) 
+% Applied Survival Analysis: Regression Modeling of Time to Event Data:
+% Second Edition, John Wiley and Sons Inc., New York, NY
+% 
+% DESCRIPTIVE ABSTRACT:
+% The main goal of this study is to describe factors associated 
+% with trends over time in the incidence and survival rates following 
+% hospital admission for acute myocardial infarction (MI).  Data have been 
+% collected during thirteen 1-year periods beginning in 1975 and extending 
+% through 2001 on all MI patients admitted to hospitals in the Worcester, 
+% Massachusetts Standard Metropolitan Statistical Area.
+% 
+% DISCLAIMER:  
+% This data is also available at the following Wiley's FTP site: 
+% ftp//ftp.wiley.com/public/sci_tech_med/survival
+% 
+% LIST OF VARIABLES:
+% 
+% Variable 	Name		Description			        Codes / Values
+% *******************************************************************************************************
+% 1		id		Identification Number			1 - 500
+% 2		age		Age at Hospital Admission		Years
+% 3 		gender		Gender 					0 = Male, 1 = Female
+% 4 		hr		Initial Heart Rate			Beats per minute
+% 5		sysbp		Initial Systolic Blood Pressure 	mmHg
+% 6		diasbp		Initial Diastolic Blood Pressure	mmHg
+% 7 		bmi		Body Mass Index			 	kg/m^2
+% 8		cvd		History of Cardiovascular Disease	0 = No, 1 = Yes						
+% 9		afb		Atrial Fibrillation			0 = No, 1 = Yes						
+% 10		sho		Cardiogenic Shock			0 = No, 1 = Yes						
+% 11		chf		Congestive Heart Complications		0 = No, 1 = Yes						
+% 12		av3		Complete Heart Block			0 = No, 1 = Yes				
+% 13		miord		MI Order 				0 = First, 1 = Recurrent
+% 14		mitype		MI Type 				0 = non Q-wave, 1 = Q-wave
+% 15		year		Cohort Year				1 = 1997, 2 = 1999, 3 = 2001				
+% 16		admitdate	Hospital Admission Date 		mm/dd/yyyy
+% 17		disdate		Hospital Discharge Date 		mm/dd/yyyy
+% 18		fdate		Date of last Follow Up 			mm/dd/yyyy
+% 19		los		Length of Hospital Stay			Days from Hospital Admission
+% 								 	  to Hospital Discharge
+% 20 		dstat		Discharge Status from Hospital		0 = Alive, 1 = Dead
+% 21		lenfol		Total Length of Follow-up		Days from Hospital Admission Date
+% 									  to Date of Last Follow-up 
+% 22		fstat		Vital Status at Last Follow-up		0 = Alive 1 = Dead
+% 
+@RELATION whas500
+
+@ATTRIBUTE 'age' real
+@ATTRIBUTE 'gender' real
+@ATTRIBUTE 'hr' real
+@ATTRIBUTE 'sysbp' real
+@ATTRIBUTE 'diasbp' real
+@ATTRIBUTE 'bmi' real
+@ATTRIBUTE 'cvd' real
+@ATTRIBUTE 'afb' real
+@ATTRIBUTE 'sho' real
+@ATTRIBUTE 'chf' real
+@ATTRIBUTE 'av3' real
+@ATTRIBUTE 'miord' real
+@ATTRIBUTE 'mitype' real
+@ATTRIBUTE 'survival_time' real
+@ATTRIBUTE 'survival_status' real
+
+@DATA
+75.0,0.0,154.0,193.0,123.0,28.6972,1.0,1.0,0.0,1.0,0.0,0.0,1.0,1671.0,1.0
+54.0,1.0,95.0,150.0,65.0,18.56161,1.0,1.0,0.0,1.0,0.0,0.0,0.0,865.0,1.0
+83.0,0.0,135.0,105.0,54.0,22.04732,1.0,1.0,0.0,0.0,0.0,1.0,0.0,849.0,1.0
+65.0,0.0,68.0,174.0,90.0,27.3199,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2065.0,0.0
+52.0,0.0,69.0,156.0,90.0,28.62989,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2126.0,0.0
+83.0,0.0,107.0,136.0,59.0,26.38699,1.0,0.0,0.0,1.0,0.0,0.0,0.0,343.0,1.0
+69.0,0.0,58.0,146.0,58.0,25.95993,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1994.0,0.0
+80.0,1.0,92.0,120.0,80.0,26.95145,1.0,0.0,0.0,0.0,0.0,0.0,1.0,42.0,1.0
+85.0,1.0,64.0,127.0,66.0,21.08004,1.0,1.0,1.0,1.0,0.0,0.0,1.0,446.0,1.0
+74.0,1.0,47.0,150.0,90.0,19.72534,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1576.0,1.0
+57.0,1.0,129.0,105.0,65.0,18.60004,0.0,1.0,0.0,0.0,0.0,0.0,1.0,95.0,1.0
+90.0,0.0,46.0,102.0,50.0,21.92724,1.0,1.0,1.0,1.0,0.0,0.0,0.0,4.0,1.0
+79.0,0.0,100.0,148.0,79.0,23.72658,0.0,1.0,0.0,0.0,0.0,0.0,1.0,903.0,1.0
+57.0,0.0,120.0,180.0,104.0,20.65988,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2025.0,0.0
+74.0,0.0,157.0,110.0,72.0,20.4852,0.0,0.0,0.0,1.0,0.0,0.0,0.0,7.0,1.0
+78.0,1.0,82.0,156.0,68.0,34.17757,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1936.0,0.0
+83.0,0.0,67.0,141.0,80.0,25.06764,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1863.0,0.0
+87.0,1.0,118.0,118.0,60.0,25.58435,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1359.0,1.0
+80.0,1.0,83.0,175.0,97.0,28.35006,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1836.0,0.0
+84.0,0.0,67.0,160.0,88.0,32.2835,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1527.0,1.0
+54.0,0.0,100.0,139.0,84.0,34.8451,1.0,1.0,0.0,1.0,0.0,0.0,1.0,1954.0,0.0
+68.0,0.0,150.0,138.0,93.0,31.63788,0.0,0.0,0.0,1.0,0.0,1.0,1.0,530.0,1.0
+63.0,1.0,71.0,216.0,108.0,25.06101,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1919.0,0.0
+32.0,1.0,102.0,130.0,83.0,39.93835,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1577.0,1.0
+76.0,1.0,100.0,200.0,110.0,27.45762,1.0,0.0,0.0,1.0,0.0,0.0,0.0,146.0,1.0
+79.0,0.0,75.0,165.0,84.0,33.82198,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1384.0,0.0
+64.0,0.0,68.0,139.0,72.0,28.05828,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1438.0,0.0
+47.0,0.0,101.0,144.0,99.0,38.78883,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1454.0,0.0
+77.0,1.0,73.0,161.0,84.0,23.42975,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1374.0,0.0
+68.0,0.0,126.0,169.0,95.0,30.7142,1.0,1.0,0.0,1.0,0.0,1.0,1.0,20.0,1.0
+71.0,0.0,72.0,160.0,64.0,39.1918,1.0,1.0,0.0,1.0,0.0,0.0,0.0,1190.0,0.0
+76.0,1.0,99.0,156.0,91.0,32.72025,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1251.0,0.0
+83.0,1.0,77.0,161.0,56.0,20.83092,1.0,0.0,0.0,1.0,0.0,1.0,0.0,10.0,1.0
+57.0,1.0,76.0,192.0,59.0,21.8135,1.0,0.0,0.0,1.0,0.0,1.0,0.0,321.0,1.0
+71.0,1.0,80.0,118.0,84.0,23.43605,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1187.0,0.0
+36.0,0.0,98.0,132.0,20.0,31.64232,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1266.0,0.0
+59.0,0.0,72.0,140.0,88.0,28.62989,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1444.0,0.0
+65.0,1.0,144.0,202.0,105.0,16.99342,1.0,0.0,0.0,1.0,0.0,1.0,0.0,226.0,1.0
+50.0,0.0,89.0,139.0,99.0,24.90308,1.0,0.0,0.0,0.0,0.0,0.0,1.0,433.0,0.0
+84.0,1.0,113.0,115.0,58.0,32.11709,1.0,0.0,0.0,1.0,0.0,1.0,0.0,371.0,0.0
+75.0,1.0,71.0,137.0,76.0,21.00559,1.0,0.0,0.0,0.0,0.0,1.0,0.0,606.0,0.0
+82.0,1.0,87.0,150.0,90.0,23.41166,1.0,1.0,0.0,0.0,0.0,0.0,0.0,506.0,0.0
+66.0,0.0,125.0,127.0,98.0,27.39631,0.0,0.0,0.0,0.0,0.0,0.0,1.0,521.0,0.0
+61.0,0.0,85.0,173.0,98.0,30.84949,1.0,0.0,0.0,0.0,0.0,0.0,0.0,511.0,0.0
+58.0,1.0,68.0,158.0,91.0,29.7584,1.0,0.0,0.0,0.0,0.0,0.0,0.0,449.0,0.0
+46.0,0.0,92.0,124.0,78.0,26.1385,1.0,0.0,0.0,0.0,0.0,0.0,0.0,457.0,0.0
+51.0,0.0,56.0,136.0,96.0,37.90281,1.0,0.0,0.0,0.0,0.0,0.0,0.0,437.0,0.0
+93.0,0.0,110.0,158.0,60.0,23.72658,1.0,0.0,0.0,1.0,0.0,1.0,0.0,7.0,1.0
+76.0,1.0,88.0,208.0,96.0,24.26862,1.0,0.0,0.0,0.0,0.0,0.0,0.0,662.0,0.0
+67.0,0.0,59.0,112.0,62.0,27.40905,1.0,0.0,0.0,0.0,0.0,0.0,1.0,532.0,0.0

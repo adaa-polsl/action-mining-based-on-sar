@@ -1,0 +1,24 @@
+Dataset: FD002/0/train.arff
+Number of examples: 233
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 7
+Number of rules without any action in premise: 0
+Conditions count: 22
+Actions count: 22
+"Any" actions count: 4
+Averege conditions per rule: 3.142857142857143
+Averege actions per rule: 3.142857142857143
+Percent of examples covered by left and right rules: 81.12
+Percent of examples covered by left rule: 90.13
+Percent of examples covered by right rule: 88.41
+
+Rules:
+r1: IF (SensorMeasure2, <549.105, inf) -> (-inf, 555.895)) AND (SensorMeasure9, <8308.27, inf) -> <8314.355, inf)) AND (SensorMeasure6, (-inf, 5.715) -> <5.715, inf)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure14, (-inf, 8064.925) -> ANY) AND (OpSet2, (-inf, 0.84075) -> (-inf, 0.84185)) AND (SensorMeasure12, <164.975, inf) -> ANY) AND (SensorMeasure6, (-inf, 13.655000000000001) -> (-inf, 5.715)) AND (SensorMeasure4, (-inf, 1252.135) -> (-inf, 1129.4299999999998)) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure14, (-inf, 8064.925) -> <8064.925, inf)) AND (SensorMeasure11, <36.635000000000005, inf) -> (-inf, 44.335)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure13, <2028.315, 2388.1400000000003) -> (-inf, 2388.0550000000003)) AND (SensorMeasure21, <6.26025, inf) -> ANY) AND (SensorMeasure20, (-inf, 14.895) -> ANY) AND (SensorMeasure7, <138.035, inf) -> (-inf, 335.785)) AND (SensorMeasure4, (-inf, 1127.985) -> <1127.985, inf)) THEN (survival_status = {NaN})
+r5: IF (SensorMeasure14, <8134.885, inf) -> (-inf, 8083.8150000000005)) AND (SensorMeasure15, <8.3655, inf) -> <9.3225, inf)) THEN (survival_status = {NaN})
+r6: IF (SensorMeasure13, (-inf, 2388.175) -> (-inf, 2388.105)) AND (SensorMeasure12, (-inf, 521.5699999999999) -> (-inf, 130.85500000000002)) AND (SensorMeasure4, <1247.205, inf) -> (-inf, 1127.985)) THEN (survival_status = {NaN})
+r7: IF (OpSet1, <25.00065, inf) -> (-inf, 25.00695)) AND (SensorMeasure3, <1257.1399999999999, inf) -> (-inf, 1584.52)) THEN (survival_status = {NaN})

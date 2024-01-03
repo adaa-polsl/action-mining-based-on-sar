@@ -1,0 +1,20 @@
+attribute,value
+Stage1,"(-inf, 1.5>"
+Stage1,"(1.5, 2.5>"
+Stage1,"(2.5, inf)"
+Operated,{1}
+Operated,{0}
+Stage3,"(-inf, 0.5>"
+Stage3,"(0.5, 1.5>"
+Stage3,"(1.5, inf)"
+Cell_Type,"(-inf, 1.5>"
+Cell_Type,"(1.5, 2.5>"
+Cell_Type,"(2.5, 3.5>"
+Cell_Type,"(3.5, inf)"
+Stage4,{0}
+Stage2,"(-inf, 1.5>"
+Stage2,"(1.5, 2.5>"
+Stage2,"(2.5, inf)"
+Means_of_Detection,"(-inf, 0.5>"
+Means_of_Detection,"(0.5, 1.5>"
+Means_of_Detection,"(1.5, inf)"

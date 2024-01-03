@@ -1,0 +1,21 @@
+id,invasion,ici,epicel,ulcer,thick,sex,age,survival_status,survival_time
+0,level.0,2.000000,not present,not present,2.900000,Female,71.000000,1.000000,99.000000
+1,level.0,2.000000,not present,present,7.410000,Female,68.000000,1.000000,279.000000
+2,level.1,2.000000,not present,present,4.040000,Male,43.000000,1.000000,779.000000
+3,level.1,1.000000,not present,not present,3.560000,Female,16.000000,1.000000,858.000000
+4,level.1,3.000000,present,not present,3.540000,Female,42.000000,1.000000,869.000000
+5,level.1,2.000000,not present,not present,1.130000,Female,36.000000,0.000000,1605.000000
+6,level.1,2.000000,not present,present,5.160000,Female,46.000000,1.000000,1621.000000
+7,level.0,2.000000,not present,not present,1.290000,Female,55.000000,0.000000,1648.000000
+8,level.1,2.000000,present,not present,1.290000,Female,48.000000,0.000000,1804.000000
+9,level.1,2.000000,not present,present,3.220000,Male,44.000000,0.000000,1812.000000
+10,level.2,1.000000,not present,present,2.580000,Male,40.000000,0.000000,1927.000000
+11,level.0,1.000000,present,not present,0.810000,Female,35.000000,0.000000,1942.000000
+12,level.1,2.000000,not present,not present,0.970000,Female,34.000000,0.000000,1956.000000
+13,level.0,1.000000,not present,present,3.870000,Male,52.000000,0.000000,2028.000000
+14,level.0,1.000000,present,not present,0.320000,Female,39.000000,0.000000,2056.000000
+15,level.0,2.000000,not present,present,1.760000,Female,58.000000,1.000000,2108.000000
+16,level.1,2.000000,not present,not present,3.870000,Female,69.000000,0.000000,2426.000000
+17,level.0,2.000000,not present,not present,1.940000,Female,61.000000,0.000000,3040.000000
+18,level.0,2.000000,present,not present,1.030000,Female,56.000000,0.000000,3695.000000
+19,level.0,1.000000,present,not present,0.650000,Male,22.000000,0.000000,4207.000000

@@ -1,0 +1,25 @@
+Dataset: uis/2/train.arff
+Number of examples: 517
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 8
+Number of rules without any action in premise: 0
+Conditions count: 33
+Actions count: 33
+"Any" actions count: 21
+Averege conditions per rule: 4.125
+Averege actions per rule: 4.125
+Percent of examples covered by left and right rules: 55.51
+Percent of examples covered by left rule: 94.97
+Percent of examples covered by right rule: 59.96
+
+Rules:
+r1: IF (BECK, (-inf, 36.5) -> ANY) AND (IV3, <0.5, inf) -> ANY) AND (RACE, (-inf, 0.5) -> ANY) AND (FRAC, <0.0472225, 0.397222) -> <0.7416665, inf)) AND (AGE, (-inf, 42.5) -> ANY) THEN (survival_status = {NaN})
+r2: IF (IV3, <0.5, inf) -> ANY) AND (RACE, (-inf, 0.5) -> ANY) AND (FRAC, (-inf, 0.55) -> <0.7416665, inf)) AND (AGE, (-inf, 45.5) -> ANY) THEN (survival_status = {NaN})
+r3: IF (BECK, <6.15, inf) -> ANY) AND (RACE, (-inf, 0.5) -> ANY) AND (HC, (-inf, 3.5) -> ANY) AND (FRAC, (-inf, 0.488889) -> <0.7694445, inf)) AND (AGE, (-inf, 44.5) -> ANY) THEN (survival_status = {NaN})
+r4: IF (BECK, <6.816, 44.0) -> ANY) AND (RACE, (-inf, 0.5) -> ANY) AND (IV, <1.5, inf) -> ANY) AND (FRAC, (-inf, 0.736111) -> <0.7416665, inf)) AND (AGE, (-inf, 44.5) -> ANY) THEN (survival_status = {NaN})
+r5: IF (BECK, (-inf, 43.5) -> ANY) AND (RACE, (-inf, 0.5) -> ANY) AND (FRAC, (-inf, 0.736111) -> <0.7416665, inf)) AND (AGE, (-inf, 44.5) -> <21.5, inf)) THEN (survival_status = {NaN})
+r6: IF (BECK, (-inf, 45.9) -> ANY) AND (FRAC, (-inf, 0.4166665) -> <0.7416665, inf)) AND (AGE, (-inf, 45.5) -> <21.5, inf)) THEN (survival_status = {NaN})
+r7: IF (BECK, (-inf, 45.9) -> ANY) AND (FRAC, (-inf, 0.7416665) -> <0.7416665, inf)) AND (AGE, (-inf, 44.5) -> <21.5, inf)) THEN (survival_status = {NaN})
+r8: IF (BECK, (-inf, 36.9) -> <8.2, inf)) AND (ND2, (-inf, 0.362947) -> ANY) AND (FRAC, <0.802778, inf) -> (-inf, 0.1277775)) AND (AGE, <21.5, inf) -> ANY) THEN (survival_status = {NaN})

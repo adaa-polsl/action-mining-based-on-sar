@@ -1,0 +1,125 @@
+% mgus {survival}
+%
+% The first six rows:
+%
+%   id age    sex dxyr pcdx pctime futime death alb creat  hgb mspike
+% 1  1  79 female   68          NA    760     1 2.8   1.2 11.5    2.0
+% 2  2  76 female   69   LP   2160   5441     1 3.1   1.0 13.3    1.8
+% 3  3  87   male   68          NA    277     1 2.2   1.1 11.2    1.3
+% 4  4  80   male   69          NA   1815     1 2.8   1.3 15.3    1.8
+% 5  5  74 female   68          NA   2587     1 3.0   0.8  9.8    1.4
+% 6  6  81   male   68          NA    547     1 2.9   0.9 11.5    1.8
+%
+% Description:
+% 
+%      Natural history of 241 subjects with monoclonal gammapothy of
+%      undetermined significance (MGUS).
+% 
+% Usage:
+% 
+%      mgus
+%      mgus1
+%      mgus2
+%      
+% Format:
+% 
+%      mgus: A data frame with 241 observations on the following 12
+%      variables.
+% 
+%        id (deleted):      subject id                                                         
+%        age:     age in years                                                       
+%        sex:     ‘male’ or ‘female’                                         
+%        dxyr:    year of diagnosis                                                  
+%        pcdx:    for subjects who progress to a plasma cell malignancy              
+%                 the subtype of malignancy: multiple myeloma (MM) is the            
+%                 most common, followed by amyloidosis (AM), macroglobulinemia (MA), 
+%                 and other lymphprolifative (LP)                                    
+%        pctime:  days from MGUS until diagnosis of a plasma cell malignancy         
+%        survival_time (futime):  days from diagnosis to last follow-up                              
+%        survival_status (death):   1= follow-up is until death                                        
+%        alb:     albumin level at MGUS diagnosis                                    
+%        creat:   creatinine at MGUS diagnosis                                       
+%        hgb:     hemoglobin at MGUS diagnosis                                       
+%        mspike:  size of the monoclonal protien spike at diagnosis                  
+%       
+%      mgus1: The same data set in start,stop format. Contains the id,
+%      age, sex, and laboratory variable described above along with
+% 
+%        start, stop:  sequential intervals of time for each 
+%                      subject 
+%        status:       =1 if the interval ends in an event   
+%        event:        the event type                        
+%       
+%      mgus2: The mgus data, but formatted in the competing risks style.
+%      Each subject has three observations, one for time to death, one
+%      for time to MM, and one for time to a PC malignancy other than MM.
+%      Contains the id, age, sex, and laboratory variable described above
+%      along with
+% 
+%        time:    time to event or censoring          
+%        status:  1 if the event occured, 0 otherwise 
+%        event:   death, myeloma, or other            
+%       
+% Details:
+% 
+%      Plasma cells are responsible for manufacturing immunoglobulins, an
+%      important part of the immune defense. At any given time there are
+%      estimated to be about 10^6 different immunoglobulins in the
+%      circulation at any one time.  When a patient has a plasma cell
+%      malignancy the distribuion will become dominated by a single
+%      isotype, the product of the malignant clone, visible as a spike on
+%      a serum protein electrophoresis. Monoclonal gammapothy of
+%      undertermined significance (MGUS) is the presence of such a spike,
+%      but in a patient with no evidence of overt malignancy.  This data
+%      set of 241 sequential subjects at Mayo Clinic was the
+%      groundbreaking study defining the natural history of such
+%      subjects.
+% 
+% Source:
+% 
+%      Mayo Clinic data courtesy of Dr. Robert Kyle.
+% 
+% References:
+% 
+%      R Kyle, Benign monoclonal gammopathy - after 20 to 35 years of
+%      follow-up, Mayo Clinic Proc 1993; 68:26-36.
+% 
+@relation mgus
+
+@attribute age numeric
+@attribute sex {male,female}
+@attribute dxyr numeric
+@attribute pcdx {AM,LP,MA,MM}
+@attribute pctime numeric
+@attribute survival_time numeric
+@attribute survival_status numeric
+@attribute alb numeric
+@attribute creat numeric
+@attribute hgb numeric
+@attribute mspike numeric
+
+@data
+76.0,female,69.0,LP,2160.0,5441.0,1.0,3.1,1.0,13.3,1.8
+66.0,male,69.0,?,?,7807.0,0.0,3.2,1.3,15.3,1.9
+80.0,male,69.0,?,?,7732.0,0.0,3.1,?,14.5,1.8
+53.0,female,68.0,MM,3590.0,5231.0,1.0,3.0,1.1,11.1,2.0
+72.0,female,69.0,MM,5934.0,6415.0,1.0,3.1,1.2,14.3,1.8
+62.0,female,67.0,MM,3987.0,4726.0,1.0,2.8,0.9,12.3,1.7
+62.0,female,72.0,MM,944.0,2466.0,1.0,3.8,0.7,12.8,1.7
+81.0,male,67.0,?,?,2223.0,1.0,2.2,0.6,12.6,1.1
+59.0,female,65.0,LP,3242.0,3275.0,1.0,?,?,?,1.3
+73.0,female,70.0,?,?,4119.0,1.0,3.8,1.0,12.6,2.6
+44.0,female,67.0,?,?,8308.0,0.0,3.4,0.8,13.3,2.2
+53.0,female,69.0,MM,4232.0,5238.0,1.0,3.4,1.0,14.8,1.5
+58.0,male,59.0,?,?,1766.0,1.0,2.6,?,13.0,2.5
+69.0,male,62.0,AM,4939.0,4941.0,1.0,2.4,?,14.3,1.3
+68.0,male,69.0,?,?,845.0,1.0,1.9,0.8,9.6,1.7
+64.0,male,70.0,?,?,3010.0,1.0,3.7,1.2,13.7,1.7
+73.0,male,66.0,?,?,3962.0,1.0,2.7,?,11.7,2.2
+65.0,male,67.0,MM,2070.0,3012.0,1.0,3.5,?,13.5,1.5
+70.0,female,69.0,MM,7545.0,7576.0,1.0,2.2,0.8,12.4,1.0
+58.0,male,69.0,MM,5236.0,7106.0,1.0,2.9,1.3,13.1,1.7
+55.0,male,69.0,?,?,2989.0,1.0,2.8,1.2,15.0,1.9
+76.0,male,70.0,?,?,6209.0,1.0,3.6,0.9,13.7,2.6
+57.0,female,70.0,?,?,7198.0,0.0,3.7,0.8,15.1,1.4
+47.0,female,69.0,?,?,7533.0,0.0,3.4,0.7,11.8,2.2

@@ -1,0 +1,5 @@
+- fold=6
+- model=rsf
+- dataset=actg320
+- method=km
+- tags=[2023-09-12]

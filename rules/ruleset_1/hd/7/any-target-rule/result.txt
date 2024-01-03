@@ -1,0 +1,27 @@
+Dataset: hd/7/train.arff
+Number of examples: 779
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 10
+Number of rules without any action in premise: 0
+Conditions count: 13
+Actions count: 11
+"Any" actions count: 0
+Averege conditions per rule: 1.3
+Averege actions per rule: 1.1
+Percent of examples covered by left and right rules: 74.58
+Percent of examples covered by left rule: 96.53
+Percent of examples covered by right rule: 78.05
+
+Rules:
+r1: IF (age, <54.615, inf) -> <15.66, 36.315)) THEN (survival_status = {NaN})
+r2: IF (age, <49.985, inf) -> (-inf, 36.315)) THEN (survival_status = {NaN})
+r3: IF (age, <45.31, inf) -> (-inf, 36.315)) THEN (survival_status = {NaN})
+r4: IF (age, <42.82, inf) -> <15.66, 36.315)) THEN (survival_status = {NaN})
+r5: IF (medwidsi, {N} -> {N}) AND (age, <36.925, 42.315) -> <20.835, 31.235)) THEN (survival_status = {NaN})
+r6: IF (age, <36.54, inf) -> <15.66, 36.925)) THEN (survival_status = {NaN})
+r7: IF (trtgiven, {RT} -> {CMT}) AND (age, <33.760000000000005, inf) -> (-inf, 36.925)) THEN (survival_status = {NaN})
+r8: IF (extranod, {N} -> {N}) AND (age, <31.965, 35.05) -> <15.66, 18.625)) THEN (survival_status = {NaN})
+r9: IF (age, <30.810000000000002, 36.019999999999996) -> <59.905, inf)) THEN (survival_status = {NaN})
+r10: IF (age, <15.66, 29.595) -> <54.615, inf)) THEN (survival_status = {NaN})

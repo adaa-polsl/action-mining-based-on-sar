@@ -1,0 +1,7 @@
+rule, nb_conditions, nb_actions, nb_actions_ANY, percent_examples_covered_left_rule, percent_examples_covered_right_rule, percent_examples_covered_left_and_right_rule, pValue_logRank, median_survival_time_left_rule, median_survival_time_right_rule, diff_median_survival_time
+r1, 1, 1, 0, 22.7926, 11.4990, 0.0000, 0.0000, 3.0089, 27.6769, -24.6680
+r2, 1, 1, 0, 47.8439, 24.0246, 0.0000, 0.0000, 13.6099, 3.0089, 10.6010
+r3, 2, 2, 0, 28.7474, 11.0883, 0.0000, 0.0000, 3.5921, 27.6769, -24.0849
+r4, 2, 2, 1, 33.4702, 11.2936, 0.0000, 0.0000, 3.7618, 27.6769, -23.9151
+r5, 2, 2, 0, 42.2998, 11.0883, 0.0000, 0.0000, 4.1040, 27.6769, -23.5729
+r6, 2, 2, 1, 47.8439, 11.2936, 0.0000, 0.0000, 4.8569, 27.6769, -22.8200

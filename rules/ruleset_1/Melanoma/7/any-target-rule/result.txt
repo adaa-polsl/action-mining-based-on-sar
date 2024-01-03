@@ -1,0 +1,21 @@
+Dataset: Melanoma/7/train.arff
+Number of examples: 185
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 4
+Number of rules without any action in premise: 0
+Conditions count: 10
+Actions count: 10
+"Any" actions count: 2
+Averege conditions per rule: 2.5
+Averege actions per rule: 2.5
+Percent of examples covered by left and right rules: 64.32
+Percent of examples covered by left rule: 82.70
+Percent of examples covered by right rule: 78.38
+
+Rules:
+r1: IF (ulcer, {present} -> ANY) AND (thick, <3.705, inf) -> (-inf, 2.17)) AND (age, <42.5, inf) -> (-inf, 75.0)) THEN (survival_status = {NaN})
+r2: IF (thick, <2.17, inf) -> (-inf, 2.17)) AND (age, <13.0, inf) -> (-inf, 75.0)) AND (ici, <1.5, inf) -> ANY) THEN (survival_status = {NaN})
+r3: IF (ulcer, {present} -> {not present}) AND (age, <22.5, inf) -> (-inf, 63.5)) THEN (survival_status = {NaN})
+r4: IF (age, (-inf, 63.5) -> <42.5, inf)) AND (thick, (-inf, 1.7000000000000002) -> <3.955, inf)) THEN (survival_status = {NaN})

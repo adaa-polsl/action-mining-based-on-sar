@@ -1,0 +1,21 @@
+Dataset: bmt-ch/4/train.arff
+Number of examples: 168
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 4
+Number of rules without any action in premise: 0
+Conditions count: 9
+Actions count: 9
+"Any" actions count: 3
+Averege conditions per rule: 2.25
+Averege actions per rule: 2.25
+Percent of examples covered by left and right rules: 75.00
+Percent of examples covered by left rule: 79.76
+Percent of examples covered by right rule: 95.24
+
+Rules:
+r1: IF (Recipientage, <15.8, 20.15) -> (-inf, 14.05)) THEN (survival_status = {NaN})
+r2: IF (PLTrecovery, <26.5, inf) -> (-inf, 26.5)) AND (Rbodymass, <27.25, inf) -> (-inf, 60.7)) THEN (survival_status = {NaN})
+r3: IF (Donorage, (-inf, 46.828767) -> ANY) AND (extcGvHD, {1} -> ANY) AND (CD34kgx10d6, <11.739999999999998, inf) -> (-inf, 7.15)) THEN (survival_status = {NaN})
+r4: IF (CD34kgx10d6, (-inf, 8.68) -> <11.855, inf)) AND (RecipientRh, {1} -> ANY) AND (CD3dCD34, <0.7767255, inf) -> (-inf, 5.403679500000001)) THEN (survival_status = {NaN})

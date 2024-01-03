@@ -1,0 +1,119 @@
+% hd {randomSurvivalForest}
+%
+% The first six rows:
+%
+%   age sex trtgiven medwidsi extranod clinstg time status
+% 1  64   F       RT        N        N       1  3.1      2
+% 2  63   M       RT        N        N       1 15.9      2
+% 3  17   M       RT        N        N       2  0.9      1
+% 4  63   M       RT        N        N       2 13.1      2
+% 5  21   M       RT        L        N       2 35.9      0
+% 6  37   M       RT        N        N       1  1.1      1
+%
+% Description:
+% 
+%      Competing risk data set involving Hodgkin's disease (Table 1.6b,
+%      _Competing Risks: A Practical Perspective_).
+% 
+% References:
+% 
+%      Pintilie M., (2006) _Competing Risks: A Practical Perspective._
+%      West Sussex: John Wiley and Sons.
+% 
+@relation hd
+
+@attribute age numeric
+@attribute sex {'F','M'}
+@attribute trtgiven {'CMT','RT'}
+@attribute medwidsi {'L','N','S'}
+@attribute extranod {'N','Y'}
+@attribute clinstg numeric
+@attribute survival_status numeric
+@attribute survival_time numeric
+@data
+32.0,M,RT,N,N,2.0,0.0,28.1
+26.0,M,RT,N,N,1.0,1.0,1.1
+27.0,M,RT,S,N,2.0,0.0,31.3
+52.49,F,RT,N,N,2.0,1.0,23.4
+72.0,F,RT,N,N,1.0,1.0,13.0
+33.0,M,RT,N,N,1.0,1.0,3.0
+19.0,F,RT,S,N,2.0,0.0,29.5
+31.0,F,RT,S,N,2.0,0.0,16.4
+45.0,M,RT,N,N,1.0,1.0,0.7
+41.0,F,RT,N,N,2.0,0.0,28.6
+27.0,M,RT,S,N,2.0,1.0,1.1
+24.0,M,RT,N,N,2.0,1.0,7.6
+59.0,F,RT,N,N,2.0,1.0,0.4
+25.0,F,RT,N,N,1.0,0.0,25.8
+18.0,F,RT,N,N,2.0,0.0,26.0
+34.0,F,CMT,L,Y,2.0,1.0,3.7
+61.0,M,RT,N,N,1.0,1.0,10.2
+18.0,M,CMT,L,N,2.0,0.0,28.4
+30.0,F,RT,N,N,2.0,1.0,0.3
+45.0,M,RT,N,N,1.0,1.0,21.2
+32.0,M,RT,S,N,2.0,1.0,20.4
+38.86,M,RT,N,N,2.0,1.0,22.4
+19.0,F,RT,S,Y,1.0,0.0,11.2
+27.0,F,CMT,L,N,2.0,1.0,8.0
+31.0,M,RT,N,N,1.0,1.0,0.7
+32.0,F,RT,S,N,2.0,0.0,23.8
+27.0,M,RT,S,N,2.0,0.0,17.3
+25.0,F,RT,N,N,1.0,0.0,24.2
+43.0,F,RT,N,N,1.0,0.0,26.9
+33.0,F,RT,N,N,2.0,0.0,21.9
+32.0,F,CMT,N,N,2.0,1.0,0.8
+19.0,F,RT,N,N,1.0,0.0,26.9
+17.0,F,RT,S,N,2.0,0.0,26.4
+38.0,M,RT,N,N,1.0,1.0,19.7
+28.0,M,RT,N,N,1.0,0.0,16.6
+29.0,M,CMT,N,N,2.0,1.0,19.8
+74.0,M,RT,N,N,1.0,1.0,1.5
+20.0,M,CMT,N,N,2.0,1.0,19.1
+27.0,M,CMT,L,Y,2.0,1.0,2.8
+26.0,F,RT,N,N,2.0,0.0,22.7
+34.0,M,RT,N,N,1.0,0.0,20.1
+24.0,F,RT,N,N,1.0,0.0,24.9
+72.0,M,RT,N,N,1.0,1.0,0.4
+74.0,F,CMT,N,N,2.0,1.0,1.6
+19.0,M,RT,N,N,1.0,0.0,8.6
+40.0,M,RT,N,N,1.0,0.0,20.6
+20.0,M,CMT,L,N,2.0,0.0,21.1
+66.0,M,RT,N,N,1.0,1.0,16.8
+39.0,F,CMT,S,N,1.0,0.0,18.7
+46.0,F,RT,S,N,2.0,1.0,1.4
+77.0,F,RT,N,N,1.0,1.0,1.5
+57.0,M,RT,N,N,1.0,1.0,3.4
+40.0,F,CMT,S,N,2.0,0.0,18.8
+30.0,F,RT,N,N,2.0,0.0,18.7
+22.0,F,RT,N,N,2.0,1.0,3.0
+34.0,M,RT,N,N,1.0,1.0,1.2
+30.0,M,CMT,S,N,2.0,1.0,16.2
+39.0,F,RT,S,N,2.0,0.0,17.8
+27.0,F,RT,S,N,2.0,0.0,18.3
+34.0,F,CMT,N,N,2.0,1.0,1.7
+43.0,M,RT,N,N,1.0,0.0,20.8
+58.0,F,CMT,N,N,2.0,1.0,9.0
+20.2,M,RT,L,N,2.0,0.0,12.8
+24.93,M,RT,N,N,2.0,1.0,2.0
+36.0,M,RT,N,N,1.0,0.0,17.4
+26.0,F,RT,N,N,1.0,0.0,17.0
+23.0,F,RT,S,N,2.0,0.0,20.6
+39.85,F,CMT,N,N,2.0,0.0,20.9
+25.0,F,CMT,N,Y,2.0,0.0,20.3
+70.58,M,RT,N,N,1.0,1.0,13.2
+46.0,M,CMT,L,Y,2.0,1.0,4.2
+22.98,F,RT,S,N,2.0,1.0,1.1
+34.0,M,CMT,N,N,2.0,1.0,1.2
+48.29,F,RT,S,N,2.0,0.0,19.2
+72.0,M,CMT,N,N,2.0,1.0,6.8
+31.64,M,CMT,S,N,2.0,0.0,15.5
+25.33,F,CMT,L,N,2.0,0.0,12.9
+42.07,F,RT,S,Y,1.0,0.0,16.7
+20.26,F,RT,S,N,2.0,0.0,14.0
+68.0,F,RT,N,N,1.0,1.0,13.2
+19.34,F,RT,S,N,2.0,0.0,18.1
+35.0,F,RT,N,N,1.0,1.0,1.3
+26.0,F,RT,S,N,2.0,0.0,6.6
+19.5,F,RT,S,N,2.0,0.0,8.5
+39.64,M,RT,N,N,1.0,1.0,3.5
+34.0,F,RT,N,N,1.0,0.0,13.1

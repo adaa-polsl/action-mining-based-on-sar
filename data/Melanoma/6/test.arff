@@ -1,0 +1,110 @@
+% Melanoma {riskRegression}
+%
+% The first six rows:
+%
+%   time status                    event invasion ici      epicel       ulcer thick    sex
+% 1   10      2       death.other.causes  level.1   2     present     present  6.76   Male
+% 2   30      2       death.other.causes  level.0   0 not present not present  0.65   Male
+% 3   35      0                 censored  level.1   2 not present not present  1.34   Male
+% 4   99      2       death.other.causes  level.0   2 not present not present  2.90 Female
+% 5  185      1 death.malignant.melanoma  level.2   2     present     present 12.08   Male
+% 6  204      1 death.malignant.melanoma  level.2   2 not present     present  4.84   Male
+%   age
+% 1  76
+% 2  56
+% 3  41
+% 4  71
+% 5  52
+% 6  28
+%
+% Description:
+% 
+%      In the period 1962-77, 205 patients with malignant melanoma
+%      (cancer of the skin) had a radical operation performed at Odense
+%      University Hospital, Denmark. All patients were followed until the
+%      end of 1977 by which time 134 were still alive while 71 had died
+%      (of out whom 57 had died from cancer and 14 from other causes).
+% 
+%      The object of the study was to assess the effect of risk factors
+%      on survival. Among such risk factors were the sex and age of the
+%      patients and the histological variables tumor thickness and
+%      ulceration (absent vs. present).
+% 
+% Usage:
+% 
+%      data(Melanoma)
+%      
+% Format:
+% 
+%      A data frame with 205 observations on the following 12 variables.
+% 
+%      ‘time’ time in days from operation
+% 
+%      ‘event’ a factor with levels ‘censored’ ‘death.malignant.melanoma’
+%           ‘death.other.causes’
+% 
+%      ‘status’ a numeric with values ‘0=censored’
+%           ‘1=death.malignant.melanoma’ ‘2=death.other.causes’
+% 
+%      ‘invasion’ a factor with levels ‘level.0’, ‘level.1’, ‘level.2’
+% 
+%      ‘ici’ inflammatory cell infiltration (ICI): 0, 1, 2 or 3
+% 
+%      ‘epicel’ a factor with levels ‘not present’ ‘present’
+% 
+%      ‘ulcer’ a factor with levels ‘not present’ ‘present’
+% 
+%      ‘thick’ tumour thickness (in 1/100 mm)
+% 
+%      ‘sex’ a factor with levels ‘Female’ ‘Male’
+% 
+%      ‘age’ age at operation (years)
+% 
+% Source:
+% 
+%      <URL:
+%      http://192.38.117.59/~linearpredictors/?page=datasets&dataset=Melanoma>
+% 
+% References:
+% 
+%      Regression with linear predictors (2010)
+% 
+%      Andersen, P.K. and Skovgaard, L.T.
+% 
+%      Springer Verlag
+% 
+% Examples:
+% 
+%      data(Melanoma)
+%     
+@relation Melanoma
+@attribute invasion {'level.0','level.1','level.2'}
+@attribute ici numeric
+@attribute epicel {'not present','present'}
+@attribute ulcer {'not present','present'}
+@attribute thick numeric
+@attribute sex {'Female','Male'}
+@attribute age numeric
+@attribute survival_status numeric
+@attribute survival_time numeric
+@data
+'level.0',2.0,'not present','not present',2.9,'Female',71.0,1.0,99.0
+'level.0',2.0,'not present','present',7.41,'Female',68.0,1.0,279.0
+'level.1',2.0,'not present','present',4.04,'Male',43.0,1.0,779.0
+'level.1',1.0,'not present','not present',3.56,'Female',16.0,1.0,858.0
+'level.1',3.0,'present','not present',3.54,'Female',42.0,1.0,869.0
+'level.1',2.0,'not present','not present',1.13,'Female',36.0,0.0,1605.0
+'level.1',2.0,'not present','present',5.16,'Female',46.0,1.0,1621.0
+'level.0',2.0,'not present','not present',1.29,'Female',55.0,0.0,1648.0
+'level.1',2.0,'present','not present',1.29,'Female',48.0,0.0,1804.0
+'level.1',2.0,'not present','present',3.22,'Male',44.0,0.0,1812.0
+'level.2',1.0,'not present','present',2.58,'Male',40.0,0.0,1927.0
+'level.0',1.0,'present','not present',0.81,'Female',35.0,0.0,1942.0
+'level.1',2.0,'not present','not present',0.97,'Female',34.0,0.0,1956.0
+'level.0',1.0,'not present','present',3.87,'Male',52.0,0.0,2028.0
+'level.0',1.0,'present','not present',0.32,'Female',39.0,0.0,2056.0
+'level.0',2.0,'not present','present',1.76,'Female',58.0,1.0,2108.0
+'level.1',2.0,'not present','not present',3.87,'Female',69.0,0.0,2426.0
+'level.0',2.0,'not present','not present',1.94,'Female',61.0,0.0,3040.0
+'level.0',2.0,'present','not present',1.03,'Female',56.0,0.0,3695.0
+'level.0',1.0,'present','not present',0.65,'Male',22.0,0.0,4207.0

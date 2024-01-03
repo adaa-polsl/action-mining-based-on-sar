@@ -1,0 +1,5 @@
+- fold=4
+- model=cgbsa
+- dataset=GBSG2
+- method=km
+- tags=[2023-09-12]

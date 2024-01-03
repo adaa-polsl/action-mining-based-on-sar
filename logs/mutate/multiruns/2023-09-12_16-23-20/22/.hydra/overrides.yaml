@@ -1,0 +1,5 @@
+- fold=4
+- model=est
+- dataset=whas500
+- method=km
+- tags=[2023-09-12]

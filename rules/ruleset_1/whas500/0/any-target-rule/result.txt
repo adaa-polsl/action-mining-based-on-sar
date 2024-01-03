@@ -1,0 +1,25 @@
+Dataset: whas500/0/train.arff
+Number of examples: 450
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 8
+Number of rules without any action in premise: 0
+Conditions count: 37
+Actions count: 37
+"Any" actions count: 4
+Averege conditions per rule: 4.625
+Averege actions per rule: 4.625
+Percent of examples covered by left and right rules: 46.22
+Percent of examples covered by left rule: 92.67
+Percent of examples covered by right rule: 47.78
+
+Rules:
+r1: IF (sysbp, (-inf, 187.5) -> ANY) AND (hr, (-inf, 119.5) -> (-inf, 107.5)) AND (age, <86.5, 103.0) -> (-inf, 67.5)) AND (diasbp, <49.5, 94.5) -> <15.5, inf)) AND (bmi, (-inf, 28.165770000000002) -> <23.298195, 43.8024)) THEN (survival_status = {NaN})
+r2: IF (sysbp, (-inf, 232.0) -> <84.5, inf)) AND (hr, <61.0, 120.0) -> (-inf, 114.5)) AND (age, <80.5, 94.0) -> (-inf, 67.5)) AND (bmi, (-inf, 26.75475) -> <23.298195, 43.8024)) AND (diasbp, (-inf, 86.5) -> <15.5, inf)) THEN (survival_status = {NaN})
+r3: IF (sysbp, (-inf, 191.0) -> <84.5, inf)) AND (hr, <76.0, inf) -> (-inf, 114.5)) AND (age, <73.5, inf) -> (-inf, 67.5)) AND (bmi, <15.073875, 26.573935) -> <23.298195, 43.8024)) AND (diasbp, <49.0, 105.0) -> <15.5, inf)) THEN (survival_status = {NaN})
+r4: IF (sysbp, (-inf, 232.0) -> <84.5, inf)) AND (hr, <61.0, inf) -> (-inf, 131.5)) AND (age, <73.5, inf) -> (-inf, 67.5)) AND (bmi, (-inf, 26.9063) -> <23.298195, 43.8024)) AND (diasbp, (-inf, 118.5) -> <15.5, inf)) THEN (survival_status = {NaN})
+r5: IF (sysbp, (-inf, 213.0) -> <84.5, inf)) AND (hr, <35.5, inf) -> (-inf, 131.5)) AND (age, <73.5, inf) -> (-inf, 67.5)) AND (bmi, (-inf, 28.31215) -> <23.298195, 43.8024)) AND (diasbp, (-inf, 116.0) -> <15.5, inf)) THEN (survival_status = {NaN})
+r6: IF (sysbp, <78.5, 206.0) -> <84.5, inf)) AND (age, <73.5, inf) -> (-inf, 67.5)) AND (diasbp, (-inf, 116.0) -> <15.5, inf)) AND (bmi, (-inf, 40.135525) -> <23.298195, inf)) THEN (survival_status = {NaN})
+r7: IF (sysbp, <84.5, inf) -> ANY) AND (hr, (-inf, 120.5) -> <61.5, 119.5)) AND (age, (-inf, 71.5) -> <85.5, inf)) AND (bmi, <18.822625000000002, 40.89478) -> <15.19482, 25.595425)) AND (diasbp, <15.5, inf) -> ANY) THEN (survival_status = {NaN})
+r8: IF (hr, <86.5, inf) -> (-inf, 86.5)) AND (age, <60.5, inf) -> (-inf, 69.5)) AND (diasbp, (-inf, 136.0) -> ANY) THEN (survival_status = {NaN})

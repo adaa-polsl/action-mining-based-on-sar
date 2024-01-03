@@ -1,0 +1,30 @@
+Dataset: GBSG2/9/train.arff
+Number of examples: 618
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 13
+Number of rules without any action in premise: 0
+Conditions count: 44
+Actions count: 44
+"Any" actions count: 9
+Averege conditions per rule: 3.3846153846153846
+Averege actions per rule: 3.3846153846153846
+Percent of examples covered by left and right rules: 68.93
+Percent of examples covered by left rule: 96.12
+Percent of examples covered by right rule: 72.17
+
+Rules:
+r1: IF (pnodes, <9.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 22.5) -> <14.5, inf)) AND (tsize, <19.0, inf) -> ANY) AND (estrec, <0.5, 490.0) -> (-inf, 926.0)) AND (age, (-inf, 63.5) -> <39.5, inf)) THEN (survival_status = {NaN})
+r2: IF (pnodes, <9.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 42.5) -> <9.5, inf)) THEN (survival_status = {NaN})
+r3: IF (pnodes, <6.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 24.5) -> <9.5, inf)) AND (tsize, <19.5, inf) -> ANY) AND (age, <35.5, inf) -> <37.5, inf)) THEN (survival_status = {NaN})
+r4: IF (pnodes, <6.5, 43.0) -> (-inf, 3.5)) AND (progrec, (-inf, 115.0) -> <9.5, inf)) AND (tsize, <10.5, inf) -> ANY) THEN (survival_status = {NaN})
+r5: IF (pnodes, <4.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 44.0) -> <0.5, inf)) THEN (survival_status = {NaN})
+r6: IF (pnodes, <3.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 55.5) -> ANY) AND (age, <31.5, inf) -> <37.5, inf)) THEN (survival_status = {NaN})
+r7: IF (pnodes, <3.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 396.5) -> <0.5, inf)) AND (estrec, (-inf, 80.0) -> <5.5, inf)) THEN (survival_status = {NaN})
+r8: IF (pnodes, <3.5, inf) -> (-inf, 3.5)) AND (progrec, (-inf, 364.5) -> <9.5, inf)) AND (age, <31.5, inf) -> <37.5, inf)) THEN (survival_status = {NaN})
+r9: IF (pnodes, (-inf, 2.5) -> <10.5, inf)) AND (progrec, <0.5, inf) -> ANY) AND (tsize, (-inf, 75.0) -> <23.5, inf)) AND (age, <39.5, 74.5) -> <48.5, inf)) AND (estrec, <7.5, 605.0) -> (-inf, 113.0)) THEN (survival_status = {NaN})
+r10: IF (pnodes, (-inf, 2.5) -> <10.5, inf)) AND (tsize, (-inf, 47.5) -> ANY) AND (age, <40.0, inf) -> <48.5, inf)) AND (estrec, (-inf, 569.5) -> ANY) THEN (survival_status = {NaN})
+r11: IF (pnodes, (-inf, 2.5) -> <10.5, inf)) AND (tsize, (-inf, 69.0) -> ANY) AND (age, <31.5, inf) -> <48.5, inf)) THEN (survival_status = {NaN})
+r12: IF (pnodes, (-inf, 5.5) -> <9.5, inf)) AND (progrec, <32.5, inf) -> (-inf, 11.5)) AND (tsize, <7.0, inf) -> <19.0, inf)) AND (estrec, (-inf, 637.5) -> <0.5, inf)) AND (age, <37.0, inf) -> ANY) THEN (survival_status = {NaN})
+r13: IF (pnodes, <2.0, inf) -> (-inf, 8.5)) AND (progrec, (-inf, 31.5) -> <103.5, inf)) THEN (survival_status = {NaN})

@@ -1,0 +1,5 @@
+- fold=3
+- model=rsf
+- dataset=whas1
+- method=km
+- tags=[2023-09-12]

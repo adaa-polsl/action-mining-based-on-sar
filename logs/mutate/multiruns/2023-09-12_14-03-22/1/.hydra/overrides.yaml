@@ -1,0 +1,5 @@
+- fold=0
+- model=csa
+- dataset=zinc
+- method=km
+- tags=[2023-09-12]

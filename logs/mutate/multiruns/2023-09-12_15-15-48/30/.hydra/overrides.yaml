@@ -1,0 +1,5 @@
+- fold=6
+- model=rsf
+- dataset=FD003
+- method=km
+- tags=[2023-09-12]

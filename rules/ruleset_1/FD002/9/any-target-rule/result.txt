@@ -1,0 +1,23 @@
+Dataset: FD002/9/train.arff
+Number of examples: 234
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 6
+Number of rules without any action in premise: 0
+Conditions count: 18
+Actions count: 18
+"Any" actions count: 1
+Averege conditions per rule: 3.0
+Averege actions per rule: 3.0
+Percent of examples covered by left and right rules: 35.90
+Percent of examples covered by left rule: 84.19
+Percent of examples covered by right rule: 47.86
+
+Rules:
+r1: IF (SensorMeasure21, (-inf, 6.4201) -> (-inf, 8.5838)) AND (SensorMeasure6, (-inf, 5.715) -> <5.715, inf)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure2, <549.2, inf) -> (-inf, 604.98)) AND (SensorMeasure4, (-inf, 1127.985) -> <1127.985, inf)) AND (SensorMeasure15, <9.259899999999998, inf) -> <8.6212, inf)) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure14, (-inf, 8087.645) -> <8053.455, inf)) AND (SensorMeasure3, <1257.25, inf) -> (-inf, 1477.0900000000001)) AND (SensorMeasure4, (-inf, 1128.135) -> <1127.985, inf)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure14, (-inf, 8064.91) -> <8064.91, inf)) AND (SensorMeasure2, <536.8199999999999, inf) -> (-inf, 555.4)) AND (OpSet1, (-inf, 35.0059) -> (-inf, 42.00625)) AND (SensorMeasure20, (-inf, 24.59) -> (-inf, 14.995000000000001)) AND (SensorMeasure7, (-inf, 335.675) -> <138.0, inf)) THEN (survival_status = {NaN})
+r5: IF (SensorMeasure3, <1479.565, inf) -> (-inf, 1352.8600000000001)) AND (SensorMeasure13, <2388.035, 2388.175) -> <2028.355, 2388.1800000000003)) AND (SensorMeasure20, (-inf, 38.894999999999996) -> ANY) THEN (survival_status = {NaN})
+r6: IF (SensorMeasure2, (-inf, 642.835) -> <543.0550000000001, inf)) AND (SensorMeasure3, <1479.565, inf) -> (-inf, 1352.8600000000001)) THEN (survival_status = {NaN})

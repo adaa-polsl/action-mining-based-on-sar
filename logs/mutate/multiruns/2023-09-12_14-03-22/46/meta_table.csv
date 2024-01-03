@@ -1,0 +1,29 @@
+attribute,value
+dysp1,"(-inf, 1.5>"
+dysp1,"(1.5, inf)"
+agepill,"(-inf, 40.5>"
+agepill,"(40.5, 41.5>"
+agepill,"(41.5, 42.0>"
+agepill,"(42.0, 42.5>"
+agepill,"(42.5, 45.5>"
+agepill,"(45.5, 56.5>"
+agepill,"(56.5, 61.5>"
+agepill,"(61.5, 66.0>"
+agepill,"(66.0, inf)"
+stdagepill,"(-inf, -2.2727269999999997>"
+stdagepill,"(-2.2727269999999997, -1.363636>"
+stdagepill,"(-1.363636, -0.6363639999999999>"
+stdagepill,"(-0.6363639999999999, 0.090909>"
+stdagepill,"(0.090909, 0.45454550000000005>"
+stdagepill,"(0.45454550000000005, 1.7272729999999998>"
+stdagepill,"(1.7272729999999998, 1.909091>"
+stdagepill,"(1.909091, inf)"
+moddysp,{Worst isn't moderate}
+smoke,{Ever}
+smoke,{Never}
+sex,{Male}
+sex,{Female}
+sevdysp,{Worst isn't severe}
+basehist,{Normal}
+basehist,{Esophagitis}
+mildysp,{Worst isn't mild}

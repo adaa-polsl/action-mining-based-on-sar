@@ -1,0 +1,36 @@
+Dataset: actg320/6/train.arff
+Number of examples: 1036
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 19
+Number of rules without any action in premise: 0
+Conditions count: 84
+Actions count: 80
+"Any" actions count: 36
+Averege conditions per rule: 4.421052631578948
+Averege actions per rule: 4.2105263157894735
+Percent of examples covered by left and right rules: 50.77
+Percent of examples covered by left rule: 98.36
+Percent of examples covered by right rule: 51.06
+
+Rules:
+r1: IF (cd4, <86.0, 370.0) -> (-inf, 7.75)) AND (priorzdv, <4.5, inf) -> <8.5, 112.0)) AND (age, (-inf, 66.5) -> <40.5, inf)) THEN (survival_status = {NaN})
+r2: IF (cd4, <2.25, 53.75) -> <86.0, inf)) AND (ivdrug, (-inf, 2.5) -> ANY) AND (priorzdv, <8.5, 31.5) -> ANY) AND (strat2, (-inf, 0.5) -> <0.5, inf)) AND (karnof, (-inf, 85.0) -> ANY) AND (age, <29.5, 56.5) -> <25.5, 66.5)) THEN (survival_status = {NaN})
+r3: IF (cd4, <0.5, 64.25) -> <86.0, inf)) AND (ivdrug, (-inf, 2.5) -> ANY) AND (priorzdv, <8.5, inf) -> ANY) AND (karnof, (-inf, 85.0) -> ANY) AND (age, <30.0, 64.0) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r4: IF (cd4, (-inf, 65.0) -> <86.0, inf)) AND (priorzdv, <8.5, inf) -> ANY) AND (karnof, (-inf, 85.0) -> ANY) AND (age, <23.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r5: IF (cd4, (-inf, 71.25) -> <86.0, inf)) AND (karnof, (-inf, 85.0) -> ANY) THEN (survival_status = {NaN})
+r6: IF (cd4, <78.25, inf) -> (-inf, 11.75)) AND (priorzdv, <5.0, inf) -> <8.5, 89.0)) AND (age, (-inf, 61.0) -> <34.5, 43.5)) THEN (survival_status = {NaN})
+r7: IF (cd4, <3.75, 11.75) -> <86.0, inf)) AND (raceth, (-inf, 3.5) -> ANY) AND (priorzdv, <7.5, inf) -> ANY) AND (age, <34.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r8: IF (cd4, <2.0, 18.75) -> <86.0, inf)) AND (priorzdv, <7.5, 33.5) -> ANY) AND (strat2, (-inf, 0.5) -> <0.5, inf)) AND (karnof, (-inf, 95.0) -> ANY) AND (age, <29.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r9: IF (cd4, (-inf, 23.25) -> <86.0, inf)) AND (priorzdv, <7.5, 91.5) -> ANY) AND (strat2, (-inf, 0.5) -> <0.5, inf)) AND (karnof, (-inf, 95.0) -> ANY) AND (age, <30.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r10: IF (cd4, (-inf, 23.25) -> <86.0, inf)) AND (strat2, (-inf, 0.5) -> <0.5, inf)) AND (karnof, (-inf, 95.0) -> ANY) AND (age, <23.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r11: IF (cd4, (-inf, 23.25) -> <86.0, inf)) AND (priorzdv, (-inf, 128.0) -> ANY) AND (strat2, (-inf, 0.5) -> <0.5, inf)) AND (age, <30.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r12: IF (cd4, (-inf, 57.25) -> <86.0, inf)) AND (tx, (-inf, 0.5) -> ANY) AND (sex, (-inf, 1.5) -> ANY) AND (hemophil, (-inf, 0.5) -> (-inf, 0.5)) AND (priorzdv, <5.5, 123.0) -> ANY) AND (karnof, (-inf, 95.0) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <30.5, 53.5) -> <25.5, 66.5)) THEN (survival_status = {NaN})
+r13: IF (cd4, (-inf, 57.25) -> <86.0, inf)) AND (hemophil, (-inf, 0.5) -> (-inf, 0.5)) AND (priorzdv, <5.5, 123.0) -> ANY) AND (karnof, (-inf, 95.0) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <34.5, inf) -> <25.5, 66.5)) THEN (survival_status = {NaN})
+r14: IF (cd4, (-inf, 64.75) -> <86.0, inf)) AND (priorzdv, <5.5, 123.0) -> ANY) AND (karnof, (-inf, 95.0) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <30.5, inf) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r15: IF (cd4, (-inf, 57.25) -> <86.0, inf)) AND (hemophil, (-inf, 0.5) -> (-inf, 0.5)) AND (priorzdv, <9.5, 100.5) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <32.5, 66.0) -> <25.5, 66.5)) THEN (survival_status = {NaN})
+r16: IF (cd4, <1.0, 57.25) -> <86.0, inf)) AND (hemophil, (-inf, 0.5) -> (-inf, 0.5)) AND (priorzdv, <5.5, 98.0) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <28.5, 65.0) -> <25.5, 66.5)) THEN (survival_status = {NaN})
+r17: IF (cd4, <1.0, 57.25) -> <86.0, inf)) AND (priorzdv, <5.5, 98.0) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, <15.5, 64.5) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r18: IF (cd4, (-inf, 71.25) -> <86.0, inf)) AND (priorzdv, <5.5, 99.5) -> ANY) AND (txgrp, (-inf, 2.5) -> ANY) AND (age, (-inf, 64.5) -> (-inf, 66.5)) THEN (survival_status = {NaN})
+r19: IF (cd4, <72.25, inf) -> <4.75, 11.75)) AND (age, (-inf, 69.0) -> <34.5, 43.5)) THEN (survival_status = {NaN})

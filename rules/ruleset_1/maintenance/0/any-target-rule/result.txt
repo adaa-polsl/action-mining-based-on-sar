@@ -1,0 +1,39 @@
+Dataset: maintenance/0/train.arff
+Number of examples: 900
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 22
+Number of rules without any action in premise: 0
+Conditions count: 56
+Actions count: 56
+"Any" actions count: 2
+Averege conditions per rule: 2.5454545454545454
+Averege actions per rule: 2.5454545454545454
+Percent of examples covered by left and right rules: 53.78
+Percent of examples covered by left rule: 96.89
+Percent of examples covered by right rule: 54.44
+
+Rules:
+r1: IF (temperatureInd, <73.02204778481965, 124.106164250967) -> <117.970649174962, 122.3237674841705)) AND (moistureInd, (-inf, 82.11649358006511) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r2: IF (pressureInd, <37.87238309671105, 64.9101808929815) -> <81.10351387448475, 85.6544554969544)) AND (temperatureInd, <66.15938244754464, inf) -> <84.7832733283098, inf)) THEN (survival_status = {NaN})
+r3: IF (pressureInd, <69.18897442135085, 113.51963786249101) -> (-inf, 89.04752527620535)) AND (moistureInd, <85.77574018459964, 88.3594665700556) -> <94.8968697498393, 104.11178400547)) THEN (survival_status = {NaN})
+r4: IF (pressureInd, (-inf, 113.51963786249101) -> (-inf, 93.6703379127845)) AND (temperatureInd, <73.9176488058742, inf) -> <86.9261968309857, inf)) AND (moistureInd, (-inf, 88.46337974251075) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r5: IF (pressureInd, <71.24353895880945, inf) -> (-inf, 93.6703379127845)) AND (temperatureInd, (-inf, 133.55210124317898) -> (-inf, 135.382893850225)) AND (moistureInd, <117.1451745011205, 126.8068354625275) -> <94.8968697498393, 98.6749496994336)) THEN (survival_status = {NaN})
+r6: IF (pressureInd, <80.4944944049157, 135.1602647942345) -> <110.171490679743, 132.64084712880202)) AND (temperatureInd, <117.970649174962, 135.64043669769302) -> <98.43496603249096, 114.9760131752)) AND (moistureInd, <94.99546316086244, 108.9899045031715) -> <92.49863061692571, 117.92359378423251)) THEN (survival_status = {NaN})
+r7: IF (pressureInd, <76.9685706204893, inf) -> <101.093227697554, inf)) AND (temperatureInd, <117.9963455457615, 148.249516806914) -> (-inf, 114.8121195910015)) AND (moistureInd, <94.99546316086244, 116.072036163534) -> <93.7318248461297, 99.0455296747015)) THEN (survival_status = {NaN})
+r8: IF (pressureInd, <81.22460635932265, inf) -> <101.093227697554, inf)) AND (temperatureInd, <117.9963455457615, 152.654248308908) -> <98.60804006466816, 114.9760131752)) THEN (survival_status = {NaN})
+r9: IF (pressureInd, (-inf, 120.2851857642065) -> (-inf, 93.6703379127845)) AND (moistureInd, <113.908241267818, 127.948822837764) -> <94.8968697498393, 103.9912382928755)) THEN (survival_status = {NaN})
+r10: IF (pressureInd, <96.17576993957525, 118.770385791244) -> <80.6500128679062, 93.6703379127845)) AND (temperatureInd, <81.74420518766595, 107.19161837279) -> <90.8826906523314, 130.1183367108105)) AND (moistureInd, (-inf, 94.8751352364792) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r11: IF (pressureInd, <85.79388078452375, 118.770385791244) -> <80.7056412039676, 93.6703379127845)) AND (temperatureInd, <82.2764656910525, inf) -> <90.8826906523314, 130.1183367108105)) AND (moistureInd, (-inf, 94.8751352364792) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r12: IF (pressureInd, (-inf, 118.5257859734615) -> (-inf, 93.6703379127845)) AND (temperatureInd, <81.0447650411146, 148.9434392358805) -> <86.9261968309857, 121.834414773084)) AND (moistureInd, (-inf, 94.8751352364792) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r13: IF (pressureInd, (-inf, 118.5257859734615) -> (-inf, 93.6703379127845)) AND (temperatureInd, <48.456179489836, inf) -> <86.9261968309857, inf)) AND (moistureInd, <67.99034345958225, 94.8751352364792) -> <94.8968697498393, 114.739272803261)) THEN (survival_status = {NaN})
+r14: IF (pressureInd, <79.14793355363821, 85.55387328822036) -> <37.87238309671105, 64.9101808929815)) AND (temperatureInd, <92.07222311492194, inf) -> <59.8509791337182, inf)) AND (moistureInd, (-inf, 112.1727414649075) -> (-inf, 112.6262502775635)) THEN (survival_status = {NaN})
+r15: IF (pressureInd, <75.75137737007105, 85.56228072392415) -> <37.87238309671105, 64.9101808929815)) AND (temperatureInd, <59.3383140409498, inf) -> <66.15938244754464, inf)) AND (moistureInd, (-inf, 111.03354316190399) -> (-inf, 113.2741490600715)) THEN (survival_status = {NaN})
+r16: IF (pressureInd, <68.36258276497755, 85.56228072392415) -> <37.87238309671105, 64.9101808929815)) AND (moistureInd, (-inf, 112.795503038849) -> (-inf, 112.6262502775635)) THEN (survival_status = {NaN})
+r17: IF (temperatureInd, <73.30157329181925, 116.295650155441) -> <117.970649174962, 135.64043669769302)) AND (moistureInd, (-inf, 94.9254944920729) -> <94.8968697498393, inf)) THEN (survival_status = {NaN})
+r18: IF (pressureInd, <61.630872021966056, 96.55282418066881) -> <38.37019721301645, 64.9101808929815)) AND (moistureInd, <90.0922106032409, 113.003886975655) -> <64.73805800733714, 112.6262502775635)) THEN (survival_status = {NaN})
+r19: IF (pressureInd, <102.446732448369, 132.64084712880202) -> <63.752659191576754, 85.57015537174189)) AND (temperatureInd, <98.98915240822066, 115.4193894436795) -> <91.8906006570451, 105.556761618177)) AND (moistureInd, (-inf, 101.76453520346001) -> ANY) THEN (survival_status = {NaN})
+r20: IF (pressureInd, <101.093227697554, 130.13944473476448) -> <63.752659191576754, 84.4400733872479)) AND (temperatureInd, <98.98915240822066, 115.4193894436795) -> <84.7832733283098, 105.556761618177)) THEN (survival_status = {NaN})
+r21: IF (pressureInd, <101.21224030583551, inf) -> <37.87238309671105, 64.9101808929815)) AND (temperatureInd, (-inf, 115.582899282256) -> <66.15938244754464, inf)) AND (moistureInd, (-inf, 121.2515020168465) -> ANY) THEN (survival_status = {NaN})
+r22: IF (pressureInd, <97.78537133990935, inf) -> <37.87238309671105, 64.9101808929815)) AND (temperatureInd, (-inf, 115.285732385526) -> <66.15938244754464, inf)) THEN (survival_status = {NaN})

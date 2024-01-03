@@ -1,0 +1,20 @@
+experiment_name: test
+dataset: follic
+method: km
+test: true
+target: any
+model: csa
+fold: 7
+ruleset: ruleset_5
+random_state: 42
+plot: false
+task_name: mutate
+tags:
+- '2023-09-12'
+paths:
+  root_dir: ${oc.env:PROJECT_ROOT}
+  data_dir: ${paths.root_dir}/data/
+  rules_dir: ${paths.root_dir}/rules/
+  log_dir: ${paths.root_dir}/logs/
+  output_dir: ${hydra:runtime.output_dir}
+  work_dir: ${hydra:runtime.cwd}

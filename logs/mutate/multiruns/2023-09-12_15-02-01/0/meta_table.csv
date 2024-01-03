@@ -1,0 +1,7 @@
+attribute,value
+OpSet1,"(-inf, -0.0027>"
+OpSet1,"(-0.0027, -0.0026>"
+OpSet1,"(-0.0026, inf)"
+SensorMeasure9,"(-inf, 9052.404999999999>"
+SensorMeasure9,"(9052.404999999999, 9057.165>"
+SensorMeasure9,"(9057.165, inf)"

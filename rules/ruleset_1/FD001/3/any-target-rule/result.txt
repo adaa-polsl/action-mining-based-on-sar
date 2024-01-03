@@ -1,0 +1,19 @@
+Dataset: FD001/3/train.arff
+Number of examples: 90
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 2
+Number of rules without any action in premise: 0
+Conditions count: 6
+Actions count: 6
+"Any" actions count: 1
+Averege conditions per rule: 3.0
+Averege actions per rule: 3.0
+Percent of examples covered by left and right rules: 60.00
+Percent of examples covered by left rule: 66.67
+Percent of examples covered by right rule: 71.11
+
+Rules:
+r1: IF (OpSet1, <-0.0026, inf) -> <-0.0021000000000000003, inf)) AND (SensorMeasure9, <9057.165, inf) -> (-inf, 9052.404999999999)) AND (SensorMeasure4, (-inf, 1413.3000000000002) -> <1394.665, inf)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure2, <642.04, inf) -> ANY) AND (SensorMeasure21, <23.24405, inf) -> (-inf, 23.498649999999998)) AND (SensorMeasure9, (-inf, 9052.404999999999) -> <9057.165, inf)) THEN (survival_status = {NaN})

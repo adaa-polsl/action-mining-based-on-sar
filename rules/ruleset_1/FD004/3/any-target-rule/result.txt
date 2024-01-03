@@ -1,0 +1,24 @@
+Dataset: FD004/3/train.arff
+Number of examples: 223
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 7
+Number of rules without any action in premise: 0
+Conditions count: 24
+Actions count: 24
+"Any" actions count: 4
+Averege conditions per rule: 3.4285714285714284
+Averege actions per rule: 3.4285714285714284
+Percent of examples covered by left and right rules: 83.41
+Percent of examples covered by left rule: 94.17
+Percent of examples covered by right rule: 88.79
+
+Rules:
+r1: IF (SensorMeasure2, <604.52, inf) -> <536.4449999999999, inf)) AND (SensorMeasure13, <2388.0550000000003, inf) -> (-inf, 2388.0550000000003)) AND (SensorMeasure3, <1477.9899999999998, inf) -> (-inf, 1581.97)) AND (SensorMeasure11, (-inf, 47.575) -> <36.504999999999995, inf)) AND (SensorMeasure8, <2318.875, inf) -> (-inf, 2388.065)) AND (SensorMeasure9, (-inf, 9056.695) -> (-inf, 9063.33)) AND (SensorMeasure17, (-inf, 393.5) -> (-inf, 392.5)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure2, <549.465, inf) -> ANY) AND (SensorMeasure13, <2388.0550000000003, inf) -> (-inf, 2388.0550000000003)) AND (SensorMeasure11, (-inf, 47.585) -> (-inf, 47.055)) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure20, (-inf, 39.025000000000006) -> <10.44, inf)) AND (SensorMeasure6, <13.645, inf) -> (-inf, 13.645)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure14, <8082.885, inf) -> (-inf, 8082.885)) AND (SensorMeasure15, <8.3675, inf) -> (-inf, 10.86725)) THEN (survival_status = {NaN})
+r5: IF (SensorMeasure3, (-inf, 1349.03) -> ANY) AND (SensorMeasure8, (-inf, 2212.005) -> <2318.67, inf)) AND (SensorMeasure6, (-inf, 9.015) -> <13.645, inf)) AND (SensorMeasure7, <137.66, inf) -> (-inf, 395.28)) THEN (survival_status = {NaN})
+r6: IF (SensorMeasure14, (-inf, 8081.71) -> (-inf, 8126.875)) AND (SensorMeasure3, (-inf, 1356.685) -> (-inf, 1573.6399999999999)) AND (SensorMeasure6, (-inf, 9.024999999999999) -> <13.645, inf)) THEN (survival_status = {NaN})
+r7: IF (SensorMeasure13, (-inf, 2387.99) -> <2388.0950000000003, inf)) AND (SensorMeasure4, <1036.0700000000002, inf) -> ANY) AND (SensorMeasure15, (-inf, 10.89185) -> ANY) THEN (survival_status = {NaN})

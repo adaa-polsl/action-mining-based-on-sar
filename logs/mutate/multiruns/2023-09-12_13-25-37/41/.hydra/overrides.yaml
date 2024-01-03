@@ -1,0 +1,5 @@
+- fold=8
+- model=csa
+- dataset=mgus
+- method=km
+- tags=[2023-09-12]

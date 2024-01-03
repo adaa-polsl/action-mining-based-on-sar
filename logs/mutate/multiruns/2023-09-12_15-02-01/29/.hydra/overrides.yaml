@@ -1,0 +1,5 @@
+- fold=5
+- model=cgbsa
+- dataset=FD001
+- method=km
+- tags=[2023-09-12]

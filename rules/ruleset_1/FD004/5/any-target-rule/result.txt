@@ -1,0 +1,23 @@
+Dataset: FD004/5/train.arff
+Number of examples: 223
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 6
+Number of rules without any action in premise: 0
+Conditions count: 20
+Actions count: 20
+"Any" actions count: 4
+Averege conditions per rule: 3.3333333333333335
+Averege actions per rule: 3.3333333333333335
+Percent of examples covered by left and right rules: 76.68
+Percent of examples covered by left rule: 86.10
+Percent of examples covered by right rule: 90.58
+
+Rules:
+r1: IF (SensorMeasure2, <604.29, inf) -> (-inf, 607.29)) AND (SensorMeasure13, <2388.0550000000003, 2388.1499999999996) -> (-inf, 2388.0550000000003)) AND (SensorMeasure3, <1477.9699999999998, inf) -> (-inf, 1496.675)) AND (SensorMeasure9, (-inf, 9056.695) -> ANY) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure2, <549.4200000000001, inf) -> (-inf, 641.95)) AND (SensorMeasure13, <2388.0550000000003, inf) -> (-inf, 2388.0550000000003)) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure12, (-inf, 522.875) -> (-inf, 182.69)) AND (SensorMeasure20, (-inf, 39.155) -> <10.655000000000001, inf)) AND (SensorMeasure6, <13.645, inf) -> (-inf, 9.015)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure2, (-inf, 555.265) -> <603.915, inf)) AND (SensorMeasure14, (-inf, 8082.889999999999) -> ANY) AND (SensorMeasure3, (-inf, 1356.3049999999998) -> <1479.5949999999998, inf)) AND (SensorMeasure12, <129.35, inf) -> ANY) AND (SensorMeasure6, (-inf, 9.015) -> (-inf, 21.564999999999998)) AND (SensorMeasure4, (-inf, 1124.92) -> <1240.615, inf)) THEN (survival_status = {NaN})
+r5: IF (OpSet1, <24.999200000000002, inf) -> <10.00085, inf)) AND (SensorMeasure3, (-inf, 1356.175) -> <1479.5949999999998, inf)) AND (SensorMeasure11, (-inf, 41.974999999999994) -> <44.019999999999996, inf)) AND (SensorMeasure6, (-inf, 9.024999999999999) -> ANY) THEN (survival_status = {NaN})
+r6: IF (SensorMeasure3, (-inf, 1358.67) -> <1479.5949999999998, inf)) THEN (survival_status = {NaN})

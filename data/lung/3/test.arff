@@ -1,0 +1,204 @@
+% ____________________________________________________________________
+%         
+%                       Data Diskette for
+%                   CASE STUDIES IN BIOMETRY
+% 
+% By Nicholas Lange, Louise Ryan and Lynne Brillard, David Brillinger,
+% Loveday Conquest, Joel Greenhouse.
+% 
+% Published by John Wiley & Sons, Inc., copyright 1994.  
+% ____________________________________________________________________
+% 
+% You have obtained all of the data used by all of the authors in the
+% twenty-one chapters of Case Studies in Biometry.  
+% 
+% Each chapter contains either one or two data sets, except for Chapter 19,
+% which has seven data sets. Corresponding to each data set are ASCII files
+% with extensions ".dat" (the data), ".txt" (the data description file), and 
+% ".sas" (a simple SAS program to read the .dat file). 
+% 
+% For chapters containing only one data set, the file name prefix is 
+% "ch" followed by chapter number, and then the above extensions.
+% For instance, for Chapter 2 you will find files "ch2.dat",
+% "ch2.txt", and "ch2.sas".
+% 
+% For chapters containing two data sets, the letters "a" and "b" are
+% added after the chapter number. For instance, for Chapter 1, you will
+% find the files "ch1a.dat", "ch1a.txt", "ch1a.sas", "ch1b.dat",
+% "ch1b.txt", "ch1b.sas".
+% 
+% For chapter 19, there are seven data sets, ch19a.dat
+% through ch19g.dat.  Each one has the same format, but
+% refers to different subsets of the whole data
+% set.  Details are given in the single text file, ch19.txt.
+% 
+% Please note permissions and usage information included in
+% the .txt file for each subset.
+% _______________________________________________________________
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: ch15.dat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File specific Information:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CASE STUDIES IN BIOMETRY: Chapter 15.
+% 
+% Early Lung Cancer Detection Studies
+% 
+% Betty J. Flehinger, Marek Kimmel
+% 
+% The file ch15.dat contains the following variables:
+% 
+%  Patient ID   : Integer
+%  
+%  Institution  : 0  - Memorial Sloan-Kettering,
+%                 1  - Mayo Clinic,
+%                 2  - John Hopkins.
+%  Group        : 1 - Study,
+%                 0 - Control.
+% 
+%  Means of Detection : 0  - Routine Cytology,
+%                       1  - Routine X-ray,
+%                       2  - Both X-ray and Cytology,
+%                       3  - Interval.
+% 
+%  Cell Type    : 0 - Epidermoid,
+%                 1 - Adenocarcinoma,
+%                 2 - Large Cell,
+%                 3 - Oat Cell,
+%                 4 - Other.
+%  Stage        : 4 digits, 1st digit (1,2,3) - overall stage,
+%                           2nd digit (1,2,3) - tumor,
+%                           3rd digit (0,1,2) - lymph nodes
+%                           4th digit (0,1) - distant metastases
+%  Operated     : 1 - yes,
+%                 0 - no.
+%  Survival     : Integer - Days from detection to last date known alive.
+%  Survival Category : 0   - Alive,
+%                      1   - Dead of lung cancer,
+%                      2   - Dead of other causes (changed to 1)
+% 
+%  Missing values - '-'.
+%
+%
+% Information about the dataset
+% CLASSTYPE: numeric
+% CLASSINDEX: none specific
+%
+@relation csb-ch15-lung
+
+@attribute Means_of_Detection numeric
+@attribute Cell_Type numeric
+@attribute Stage1 numeric
+@attribute Stage2 numeric
+@attribute Stage3 numeric
+@attribute Stage4 {0,1}
+@attribute Operated {0,1}
+@attribute survival_time numeric
+@attribute survival_status numeric
+
+@data
+3.0,2.0,1.0,2.0,0.0,0,0,0.5,1.0
+3.0,1.0,3.0,2.0,?,1,0,14.0,1.0
+1.0,1.0,3.0,3.0,0.0,1,0,49.0,1.0
+3.0,1.0,3.0,1.0,?,1,0,65.0,1.0
+0.0,?,?,?,?,?,0,99.0,0.0
+1.0,3.0,3.0,3.0,2.0,0,0,117.0,1.0
+3.0,3.0,3.0,3.0,2.0,0,0,128.0,1.0
+1.0,2.0,3.0,?,2.0,?,0,131.0,1.0
+1.0,0.0,3.0,?,2.0,?,0,156.0,1.0
+1.0,2.0,1.0,1.0,0.0,0,1,164.0,1.0
+2.0,0.0,3.0,2.0,1.0,1,0,165.0,1.0
+3.0,3.0,3.0,3.0,2.0,1,0,166.0,1.0
+1.0,1.0,2.0,2.0,1.0,0,1,196.0,1.0
+3.0,3.0,3.0,3.0,?,0,0,211.0,1.0
+3.0,3.0,3.0,?,2.0,1,0,213.0,1.0
+3.0,3.0,3.0,?,?,1,0,226.0,1.0
+2.0,0.0,2.0,2.0,1.0,0,1,236.0,1.0
+1.0,0.0,2.0,2.0,1.0,0,1,248.0,1.0
+1.0,3.0,3.0,1.0,2.0,0,0,260.0,1.0
+1.0,1.0,3.0,3.0,2.0,0,1,263.0,1.0
+1.0,3.0,3.0,3.0,2.0,0,0,287.0,1.0
+3.0,3.0,3.0,3.0,1.0,0,0,300.0,1.0
+1.0,0.0,1.0,2.0,0.0,0,1,335.0,1.0
+3.0,1.0,3.0,3.0,?,?,1,351.0,1.0
+0.0,0.0,1.0,2.0,0.0,0,1,359.0,0.0
+1.0,3.0,3.0,?,2.0,?,1,368.0,1.0
+3.0,1.0,3.0,1.0,1.0,1,0,386.0,1.0
+3.0,1.0,1.0,2.0,0.0,0,1,424.0,0.0
+3.0,0.0,3.0,1.0,2.0,0,1,426.0,0.0
+3.0,1.0,3.0,1.0,0.0,1,0,431.0,0.0
+3.0,0.0,3.0,1.0,1.0,1,0,434.0,1.0
+1.0,1.0,3.0,3.0,0.0,0,1,438.0,0.0
+0.0,0.0,3.0,3.0,1.0,0,0,444.0,1.0
+3.0,3.0,3.0,2.0,2.0,1,0,450.0,1.0
+3.0,1.0,1.0,1.0,0.0,0,0,457.0,1.0
+3.0,2.0,3.0,2.0,2.0,1,0,478.0,1.0
+2.0,3.0,3.0,2.0,2.0,0,0,493.0,1.0
+3.0,3.0,3.0,3.0,2.0,0,0,500.0,1.0
+3.0,0.0,3.0,3.0,2.0,0,1,502.0,1.0
+1.0,1.0,3.0,3.0,2.0,0,1,509.0,1.0
+1.0,2.0,1.0,1.0,0.0,0,0,509.0,1.0
+2.0,0.0,3.0,2.0,2.0,0,0,518.0,1.0
+1.0,1.0,3.0,3.0,1.0,0,0,543.0,1.0
+1.0,3.0,1.0,1.0,0.0,0,1,561.0,1.0
+3.0,3.0,3.0,3.0,?,1,0,565.0,1.0
+3.0,1.0,3.0,3.0,0.0,1,1,579.0,1.0
+1.0,2.0,3.0,2.0,2.0,0,0,601.0,1.0
+3.0,3.0,3.0,2.0,2.0,0,0,693.0,1.0
+3.0,3.0,3.0,1.0,1.0,1,0,698.0,1.0
+1.0,2.0,3.0,1.0,2.0,0,1,699.0,1.0
+1.0,1.0,1.0,1.0,0.0,0,1,717.0,1.0
+1.0,1.0,1.0,1.0,0.0,0,1,739.0,0.0
+1.0,4.0,1.0,1.0,0.0,0,0,740.0,1.0
+1.0,1.0,1.0,1.0,0.0,0,1,770.0,1.0
+3.0,2.0,3.0,3.0,2.0,0,0,775.0,1.0
+1.0,1.0,1.0,1.0,0.0,0,1,804.0,1.0
+1.0,0.0,1.0,2.0,0.0,0,1,847.0,0.0
+1.0,0.0,3.0,1.0,2.0,0,1,853.0,1.0
+3.0,2.0,3.0,3.0,0.0,0,1,856.0,1.0
+1.0,0.0,1.0,1.0,0.0,0,1,867.0,0.0
+2.0,1.0,3.0,3.0,0.0,0,1,882.0,1.0
+3.0,3.0,3.0,3.0,?,0,0,909.0,1.0
+1.0,2.0,1.0,1.0,0.0,0,1,964.0,0.0
+0.0,0.0,1.0,1.0,0.0,0,1,1000.0,0.0
+1.0,1.0,1.0,2.0,0.0,0,1,1172.0,1.0
+1.0,2.0,3.0,3.0,2.0,0,1,1178.0,1.0
+1.0,3.0,1.0,2.0,0.0,0,0,1208.0,1.0
+1.0,3.0,1.0,1.0,0.0,0,1,1211.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,1221.0,0.0
+1.0,0.0,3.0,1.0,2.0,0,0,1336.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,1354.0,1.0
+0.0,0.0,1.0,2.0,0.0,0,1,1384.0,1.0
+3.0,3.0,3.0,3.0,2.0,0,0,1494.0,1.0
+1.0,1.0,1.0,1.0,0.0,0,1,1535.0,1.0
+3.0,3.0,1.0,2.0,0.0,0,1,1550.0,1.0
+1.0,3.0,3.0,1.0,2.0,1,0,1583.0,1.0
+3.0,0.0,1.0,1.0,0.0,0,1,1592.0,0.0
+3.0,3.0,3.0,3.0,2.0,0,0,1599.0,1.0
+3.0,2.0,3.0,2.0,2.0,1,0,1675.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,1741.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,1853.0,0.0
+0.0,0.0,1.0,1.0,0.0,0,1,1869.0,0.0
+3.0,1.0,3.0,1.0,2.0,0,1,1886.0,1.0
+3.0,0.0,3.0,3.0,0.0,0,0,2002.0,1.0
+3.0,1.0,3.0,2.0,2.0,0,1,2006.0,1.0
+3.0,2.0,3.0,3.0,0.0,1,0,2041.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,2055.0,0.0
+3.0,0.0,1.0,1.0,0.0,0,1,2189.0,1.0
+3.0,0.0,3.0,2.0,2.0,1,1,2200.0,1.0
+3.0,1.0,3.0,3.0,0.0,0,1,2289.0,0.0
+3.0,0.0,2.0,1.0,1.0,0,1,2300.0,1.0
+3.0,3.0,3.0,3.0,?,0,0,2398.0,1.0
+3.0,1.0,2.0,1.0,1.0,0,1,2444.0,0.0
+3.0,1.0,3.0,2.0,2.0,1,0,2450.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,2590.0,0.0
+1.0,1.0,1.0,1.0,0.0,0,1,2681.0,0.0
+1.0,1.0,3.0,1.0,2.0,0,1,2817.0,0.0
+1.0,1.0,1.0,2.0,0.0,0,1,2901.0,0.0
+1.0,1.0,1.0,1.0,0.0,0,1,2950.0,0.0
+1.0,2.0,1.0,2.0,0.0,0,1,3032.0,0.0
+0.0,0.0,1.0,1.0,0.0,0,0,3156.0,1.0
+0.0,0.0,1.0,1.0,0.0,0,1,4130.0,0.0
+1.0,0.0,1.0,2.0,0.0,0,1,4184.0,0.0

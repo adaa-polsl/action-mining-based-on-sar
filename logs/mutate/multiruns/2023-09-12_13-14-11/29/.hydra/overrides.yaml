@@ -1,0 +1,5 @@
+- fold=5
+- model=cgbsa
+- dataset=lung
+- method=km
+- tags=[2023-09-12]

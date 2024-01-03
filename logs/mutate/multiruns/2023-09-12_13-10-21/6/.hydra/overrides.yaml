@@ -1,0 +1,5 @@
+- fold=1
+- model=csa
+- dataset=hd
+- method=km
+- tags=[2023-09-12]

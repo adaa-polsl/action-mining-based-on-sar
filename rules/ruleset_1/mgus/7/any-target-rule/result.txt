@@ -1,0 +1,21 @@
+Dataset: mgus/7/train.arff
+Number of examples: 217
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 4
+Number of rules without any action in premise: 0
+Conditions count: 14
+Actions count: 13
+"Any" actions count: 3
+Averege conditions per rule: 3.5
+Averege actions per rule: 3.25
+Percent of examples covered by left and right rules: 43.32
+Percent of examples covered by left rule: 82.95
+Percent of examples covered by right rule: 44.24
+
+Rules:
+r1: IF (mspike, <0.7000000000000001, 2.45) -> ANY) AND (dxyr, (-inf, 70.5) -> ANY) AND (hgb, <11.350000000000001, inf) -> ANY) AND (age, (-inf, 62.5) -> <74.5, inf)) THEN (survival_status = {NaN})
+r2: IF (mspike, (-inf, 2.45) -> <0.7000000000000001, inf)) AND (hgb, (-inf, 14.2) -> <11.05, inf)) AND (age, <74.5, inf) -> (-inf, 55.5)) THEN (survival_status = {NaN})
+r3: IF (mspike, (-inf, 2.3499999999999996) -> <0.7000000000000001, inf)) AND (hgb, (-inf, 14.149999999999999) -> <11.25, inf)) AND (dxyr, <59.5, inf) -> <59.5, inf)) AND (age, <65.5, inf) -> (-inf, 55.5)) THEN (survival_status = {NaN})
+r4: IF (dxyr, <60.5, inf) -> <59.5, inf)) AND (hgb, (-inf, 16.35) -> <11.25, inf)) AND (age, <65.5, inf) -> (-inf, 55.5)) THEN (survival_status = {NaN})

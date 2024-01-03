@@ -1,0 +1,23 @@
+Dataset: FD004/1/train.arff
+Number of examples: 223
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 6
+Number of rules without any action in premise: 0
+Conditions count: 21
+Actions count: 21
+"Any" actions count: 3
+Averege conditions per rule: 3.5
+Averege actions per rule: 3.5
+Percent of examples covered by left and right rules: 64.57
+Percent of examples covered by left rule: 86.10
+Percent of examples covered by right rule: 76.68
+
+Rules:
+r1: IF (SensorMeasure2, <604.29, inf) -> ANY) AND (SensorMeasure13, <2387.325, 2388.1549999999997) -> (-inf, 2388.175)) AND (SensorMeasure11, (-inf, 47.615) -> ANY) AND (SensorMeasure20, <24.445, 39.004999999999995) -> <10.655000000000001, inf)) AND (SensorMeasure8, <2318.7250000000004, inf) -> <2211.755, inf)) AND (SensorMeasure9, <8718.24, 9069.34) -> <8310.41, inf)) AND (SensorMeasure6, <13.645, inf) -> (-inf, 13.645)) AND (SensorMeasure4, <1240.8400000000001, inf) -> <1111.825, inf)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure21, (-inf, 23.4935) -> (-inf, 14.847999999999999)) AND (SensorMeasure20, (-inf, 39.155) -> <10.655000000000001, inf)) AND (SensorMeasure6, <13.645, inf) -> (-inf, 13.645)) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure14, <8082.885, inf) -> (-inf, 8082.885)) AND (SensorMeasure2, <548.9200000000001, inf) -> ANY) AND (SensorMeasure21, (-inf, 23.5012) -> (-inf, 8.523150000000001)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure3, (-inf, 1348.2849999999999) -> (-inf, 1573.6399999999999)) AND (SensorMeasure6, (-inf, 9.015) -> <13.645, inf)) THEN (survival_status = {NaN})
+r5: IF (SensorMeasure3, (-inf, 1354.54) -> (-inf, 1573.6399999999999)) AND (SensorMeasure11, (-inf, 42.095) -> <44.135, inf)) AND (SensorMeasure6, (-inf, 9.024999999999999) -> <13.645, inf)) THEN (survival_status = {NaN})
+r6: IF (OpSet1, <24.999650000000003, inf) -> <10.00065, inf)) AND (SensorMeasure11, (-inf, 41.974999999999994) -> <44.3, inf)) THEN (survival_status = {NaN})

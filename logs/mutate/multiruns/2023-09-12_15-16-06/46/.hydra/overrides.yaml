@@ -1,0 +1,5 @@
+- fold=9
+- model=csa
+- dataset=FD004
+- method=km
+- tags=[2023-09-12]

@@ -1,0 +1,25 @@
+Dataset: whas500/5/train.arff
+Number of examples: 450
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 8
+Number of rules without any action in premise: 0
+Conditions count: 27
+Actions count: 27
+"Any" actions count: 3
+Averege conditions per rule: 3.375
+Averege actions per rule: 3.375
+Percent of examples covered by left and right rules: 56.89
+Percent of examples covered by left rule: 90.44
+Percent of examples covered by right rule: 58.00
+
+Rules:
+r1: IF (hr, (-inf, 119.5) -> (-inf, 111.0)) AND (age, <85.5, inf) -> (-inf, 69.5)) AND (diasbp, <49.5, 94.0) -> <59.5, inf)) AND (bmi, (-inf, 29.327815) -> <19.341929999999998, inf)) THEN (survival_status = {NaN})
+r2: IF (age, <84.5, inf) -> (-inf, 69.5)) AND (bmi, <15.384889999999999, 28.80703) -> <23.298195, 43.8024)) THEN (survival_status = {NaN})
+r3: IF (sysbp, (-inf, 206.5) -> <84.5, inf)) AND (hr, <52.0, 117.5) -> (-inf, 114.5)) AND (age, <80.5, inf) -> (-inf, 69.5)) AND (bmi, (-inf, 27.693260000000002) -> <23.298195, 43.8024)) AND (diasbp, (-inf, 95.0) -> <15.5, inf)) THEN (survival_status = {NaN})
+r4: IF (age, <80.5, inf) -> (-inf, 69.5)) THEN (survival_status = {NaN})
+r5: IF (hr, <62.0, inf) -> (-inf, 111.0)) AND (age, <74.5, inf) -> (-inf, 69.5)) AND (bmi, (-inf, 28.23666) -> <23.298195, 43.8024)) AND (diasbp, (-inf, 96.5) -> <15.5, inf)) THEN (survival_status = {NaN})
+r6: IF (age, <73.5, inf) -> (-inf, 69.5)) AND (bmi, (-inf, 31.644505000000002) -> <23.298195, inf)) AND (diasbp, (-inf, 136.5) -> <15.5, inf)) THEN (survival_status = {NaN})
+r7: IF (hr, (-inf, 125.5) -> (-inf, 119.5)) AND (sho, (-inf, 0.5) -> ANY) AND (age, (-inf, 69.5) -> <85.5, inf)) AND (bmi, <19.322715000000002, 43.8024) -> (-inf, 29.550220000000003)) AND (diasbp, <15.5, inf) -> ANY) THEN (survival_status = {NaN})
+r8: IF (sysbp, <70.0, inf) -> ANY) AND (age, (-inf, 71.5) -> <85.5, inf)) AND (bmi, <18.841839999999998, 42.92046) -> <15.19482, 29.550220000000003)) THEN (survival_status = {NaN})

@@ -1,0 +1,127 @@
+% ========================================================================================================
+% Bmt dataset
+% ========================================================================================================
+%The dataset describes pediatric patients with several hematologic diseases: malignant disorders
+%(i.a. patients with acute lymphoblastic leukemia, with acute myelogenous leukemia, with chronic myelogenous
+%leukemia, with myelodysplastic syndrome) and nonmalignant cases (i.a. patients with severe aplastic anemia,
+%with Fanconi anemia, with X-linked adrenoleukodystrophy). 
+%All patients were subject to the unmanipulated allogeneic unrelated donor hematopoietic stem cell transplantation. 
+%The motivation of this study was to identify the most important factors influencing the success or failure of the transplantation procedure. 
+%In particular, verification of the research hypothesis that increased dosage of CD34+ cells / kg extends overall survival
+%time without simultaneous occurrence of undesirable events affecting patients' quality of life.
+%
+%
+%Source:
+%
+%Provide the names, email addresses, institutions, and other contact information of the donors and creators of the data set. 
+%
+%Marek Sikora^{1,2} (marek.sikora '@' polsl.pl), Lukasz Wrobel^{1} (lukasz.wrobel '@' polsl.pl),  
+%(1) Institute of Computer Science, Silesian University of Technology, 44-100 Gliwice, Poland 
+%(2) Institute of Innovative Technologies EMAG, 40-189 Katowice, Poland
+%
+%
+%Data Set Information:
+%
+%The set contains 187 examples characterized by 37 attributes. 
+%The meaning of the following features is as follows:
+%- Recipientgender - Male - 1, Female - 0,
+%- Stemcellsource - Source of hematopoietic stem cells (Peripheral blood - 1, Bone marrow - 0),
+%- Donorage - Age of the donor at the time of hematopoietic stem cells apheresis
+%- Donorage35 - Donor age <35 - 0, Donor age >=35 - 1
+%- IIIV - Development of acute graft versus host disease stage II or III or IV (Yes - 1, No - 0),
+%- Gendermatch - Compatibility of the donor and recipient according to their gender (Female to Male - 1, Other - 0),
+%- DonorABO - ABO blood group of the donor of hematopoietic stem cells (0 - 0, 1, A, B=-1, AB=2),
+%- RecipientABO - ABO blood group of the recipient of hematopoietic stem cells (0 - 0, 1, A, B=-1, AB=2),
+%- RecipientRh - Presence of the Rh factor on recipient’s red blood cells ('+' - 1, '-' - 0),
+%- ABOMatch - Compatibility of the donor and the recipient of hematopoietic stem cells according to ABO blood group (matched - 1, mismatched - 1)
+%- CMVstatus - Serological compatibility of the donor and the recipient of hematopoietic stem cells according to cytomegalovirus
+%  infection prior to transplantation (the higher the value the lower the compatibility)
+%- RecipientCMV - Presence of cytomegalovirus infection in the donor of hematopoietic stem cells prior to transplantation (presence - 1, absence - 0)
+%- Disease - Type of disease (ALL,AML,chronic,nonmalignant,lymphoma)
+%- Riskgroup - High risk - 1, Low risk - 0,
+%- Txpostrelapse - The second bone marrow transplantation after relapse (No - 0; Yes - 1),
+%- Diseasegroup - Type of disease (malignant - 1, nonmalignant - 0), 
+%- HLAmatch - Compatibility of antigens of the main histocompatibility complex of the donor and the recipient of hematopoietic stem cells
+%- according to ALL international BFM SCT 2008 criteria (10/10 - 0, 9/10 - 1, 8/10 - 2, 7/10 - 3 (allele/antigens)),
+%- HLAmismatch - HLA matched - 0, HL mismatched - 1,
+%- Antigen - In how many anigens there is difference beetwen the donor nad the recipient (-1 - no differences, 0 - one difference,1 (2) - two (three) diffences)
+%- Allel - In how many allele there is difference beetwen the donor nad the recipient {-1 no differences,0 - one difference, 1 (2) (3) - two, (tree, four) differences)
+%- HLAgrI - The differecne type beetwien the donor and the recipient (HLA mateched - 0,the difference is in only one antigen - 1,
+%  the difference is only in one allel - 2, the difference is only in DRB1 cell - 3, two differences (two allele or two antignes) - 4,
+%  two differences (two allele or two antignes) - 5),
+%- Recipientage - Age of the recipient of hematopoietic stem cells at the time of transplantation,
+%- Recipientage10 - Recipient age <10 - 0, Recipient age>=10 - 1,
+%- Recipientageint - Recipient age in (0,5] - 0, (5, 10] - 1, (10, 20] - 2,
+%- Relapse - Reoccurrence of the disease (No - 0, Yes - 1),
+%- aGvHDIIIIV - Development of acute graft versus host disease stage III or IV (Yes - 0, No - 1)
+%- extcGvHD - Development of extensive chronic graft versus host disease (Yes - 0, No - 1)
+%- CD34kgx10d6 - CD34+ cell dose per kg of recipient body weight (10^6/kg)
+%- CD3dCD34 - CD3+ cell to CD34+ cell ratio
+%- CD3dkgx10d8 - CD3+ cell dose per kg of recipient body weight (10^8/kg)
+%- Rbodymass - Body mass of the recipient of hematopoietic stem cells at the time of transplantation,
+%- ANCrecovery - Time to neutrophils recovery defined as neutrophils count >0.5 x 10^9/L 
+%- PLTrecovery - Time to platelet recovery defined as platelet count >50000/mm3,
+%- time_to_aGvHD_III_IV - Time to development of acute graft versus host disease stage III or IV
+%- survival_time numeric
+%- survival_status
+%
+@relation 'bone-marrow'
+
+@attribute Recipientgender {1,0}
+@attribute Stemcellsource {1,0}
+@attribute Donorage numeric
+@attribute Donorage35 {0,1}
+@attribute IIIV {1,0}
+@attribute Gendermatch {0,1}
+@attribute DonorABO {1,-1,2,0}
+@attribute RecipientABO {1,-1,2,0}
+@attribute RecipientRh {1,0}
+@attribute ABOmatch {0,1}
+@attribute CMVstatus {3,2,1,0}
+@attribute DonorCMV {1,0}
+@attribute RecipientCMV {1,0}
+@attribute Disease {ALL,AML,chronic,nonmalignant,lymphoma}
+@attribute Riskgroup {1,0}
+@attribute Txpostrelapse {0,1}
+@attribute Diseasegroup {1,0}
+@attribute HLAmatch {0,1,3,2}
+@attribute HLAmismatch {0,1}
+@attribute Antigen {-1,1,0,2}
+@attribute Alel {-1,0,2,1,3}
+@attribute HLAgrI {0,1,7,3,2,4,5}
+@attribute Recipientage numeric
+@attribute Recipientage10 {0,1}
+@attribute Recipientageint {0,1,2}
+@attribute Relapse {0,1}
+@attribute aGvHDIIIIV {0,1}
+@attribute extcGvHD {1,0}
+@attribute CD34kgx10d6 numeric
+@attribute CD3dCD34 numeric
+@attribute CD3dkgx10d8 numeric
+@attribute Rbodymass numeric
+@attribute ANCrecovery numeric
+@attribute PLTrecovery numeric
+@attribute time_to_aGvHD_III_IV numeric
+@attribute survival_time numeric
+@attribute survival_status numeric
+
+@data
+1,1,39.983562,1,1,0,1,-1,1,1,?,0,?,ALL,0,0,1,3,1,1,2,7,4.7,0,0,0,0,?,11.27,3.242425,3.48,17.0,16.0,1000000.0,16.0,35.0,1.0
+1,1,39.380822,1,1,0,1,1,1,0,3,1,1,chronic,1,0,1,1,0,1,0,1,1.7,0,0,0,0,1,5.37,2.778202,1.93,10.0,17.0,66.0,18.0,2293.0,0.0
+1,1,49.860274,1,0,0,0,-1,1,1,3,1,1,nonmalignant,0,0,0,0,0,-1,-1,0,16.6,1,2,0,1,1,15.28,8.784289,1.74,63.0,18.0,24.0,1000000.0,111.0,1.0
+1,1,39.641096,1,0,0,-1,1,1,1,2,0,1,nonmalignant,0,0,0,1,0,1,0,3,4.9,0,0,0,1,1,16.02,1.351711,11.85,7.5,11.0,51.0,1000000.0,1346.0,0.0
+0,0,35.630137,1,0,0,1,1,1,0,2,0,1,AML,0,0,1,1,0,1,0,1,15.5,1,2,0,1,?,1.9,5.276616,0.36,61.3,18.0,1000000.0,1000000.0,60.0,1.0
+0,1,40.052055,1,0,0,1,1,1,0,2,0,1,nonmalignant,0,0,0,0,0,-1,-1,0,3.9,0,0,1,1,1,16.0,1.589775,10.06,14.1,12.0,13.0,1000000.0,1018.0,1.0
+1,1,30.156164,0,1,0,1,1,1,0,0,0,0,lymphoma,0,0,1,0,0,-1,-1,0,7.2,0,1,1,1,?,17.12,2.337369,7.32,24.3,16.0,21.0,1000000.0,67.0,1.0
+0,1,30.594521,0,1,0,0,1,1,1,2,0,1,chronic,0,0,1,2,1,2,0,4,16.5,1,2,0,0,1,6.36,2.59522,2.45,55.2,12.0,21.0,11.0,68.0,1.0
+0,0,43.065753,1,0,0,-1,0,1,1,2,0,1,ALL,0,0,1,0,0,-1,-1,0,6.7,0,1,0,1,1,4.27,99.56097,0.04,17.6,18.0,24.0,1000000.0,2117.0,0.0
+1,1,33.643836,0,0,0,-1,-1,0,0,0,0,0,ALL,0,0,1,0,0,-1,-1,0,17.5,1,2,0,1,1,7.97,1.558548,5.11,65.0,19.0,23.0,1000000.0,718.0,0.0
+0,1,42.739726,1,1,0,0,1,1,1,1,1,0,ALL,0,0,1,1,0,1,0,1,7.7,0,1,0,0,1,15.47,1.346764,11.49,20.8,16.0,18.0,21.0,1188.0,0.0
+0,1,34.005479,0,1,0,0,0,1,0,0,0,0,ALL,0,0,1,2,1,1,1,4,9.0,0,1,0,1,1,8.34,2.703806,3.08,33.0,18.0,46.0,1000000.0,182.0,1.0
+0,0,36.789041,1,1,0,0,0,1,0,2,0,1,ALL,0,0,1,0,0,-1,-1,0,16.6,1,2,0,0,?,3.5,7.423372,0.47,58.9,19.0,1000000.0,15.0,42.0,1.0
+0,1,43.745205,1,1,0,0,0,1,0,2,0,1,AML,1,0,1,2,1,1,1,4,3.3,0,0,0,0,1,44.0,3.597279,12.23,13.0,11.0,12.0,27.0,2337.0,0.0
+1,0,30.279452,0,0,0,1,0,0,1,2,0,1,chronic,0,0,1,1,0,1,0,1,3.4,0,0,1,1,1,10.96,10.611083,1.03,14.8,15.0,19.0,1000000.0,2932.0,0.0
+1,1,43.30411,1,1,0,1,1,1,0,2,0,1,ALL,0,0,1,0,0,-1,-1,0,14.0,1,2,0,0,1,9.86,3.465003,2.85,58.0,17.0,24.0,21.0,1214.0,0.0
+1,1,35.430137,1,1,1,1,-1,1,1,2,0,1,ALL,0,0,1,1,0,1,0,1,13.5,1,2,0,0,?,8.63,1.2068,7.15,65.0,14.0,18.0,14.0,90.0,1.0
+1,1,30.421918,0,1,1,0,2,0,1,2,0,1,ALL,0,0,1,1,0,1,0,1,8.5,0,1,1,0,1,12.52,1.350554,9.27,24.0,14.0,33.0,18.0,1074.0,0.0
+0,1,34.167123,0,1,0,0,-1,1,1,2,0,1,ALL,0,0,1,1,0,0,1,2,12.7,1,2,0,1,1,11.45,1.671314,6.85,49.0,13.0,14.0,1000000.0,1985.0,0.0

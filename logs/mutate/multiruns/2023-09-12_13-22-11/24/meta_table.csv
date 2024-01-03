@@ -1,0 +1,17 @@
+attribute,value
+ulcer,{present}
+thick,"(-inf, 1.315>"
+thick,"(1.315, 1.69>"
+thick,"(1.69, 2.02>"
+thick,"(2.02, 2.17>"
+thick,"(2.17, 3.38>"
+thick,"(3.38, inf)"
+age,"(-inf, 13.0>"
+age,"(13.0, 42.5>"
+age,"(42.5, 52.5>"
+age,"(52.5, 63.5>"
+age,"(63.5, 75.5>"
+age,"(75.5, inf)"
+ici,"(-inf, 0.5>"
+ici,"(0.5, 1.5>"
+ici,"(1.5, inf)"

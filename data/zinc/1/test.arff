@@ -1,0 +1,181 @@
+% zinc {NestedCohort}
+%
+% The first six rows:
+%
+%        id8    sex agepill      agestr smoke drink anyhist       basehist dysp1 dysp2
+% 1 10100012 Female      53 51<=Age<=60 Never Never    <NA>         Normal     1     0
+% 2 10100123 Female      54 51<=Age<=60 Never Never    <NA>         Normal     1     0
+% 3 10300066   Male      54 51<=Age<=60 Never  Ever    <NA>         Normal     1     0
+% 4 10400038   Male      44     Age<=50 Never  Ever    <NA>         Normal     1     0
+% 5 10400106   Male      44     Age<=50 Never Never    <NA> 'Mild Dysplasia'     3     1
+% 6 10400245 Female      43     Age<=50 Never Never    <NA>    Esophagitis     2     0
+%            mildysp              moddysp            sevdysp ec01 futime01
+% 1 Worst isn\'t mild Worst isn\'t moderate Worst isn\'t severe    0     5980
+% 2 Worst isn\'t mild Worst isn\'t moderate Worst isn\'t severe    0     5980
+% 3 Worst isn\'t mild Worst isn\'t moderate Worst isn\'t severe    0     5980
+% 4 Worst isn\'t mild Worst isn\'t moderate Worst isn\'t severe    0     5980
+% 5   'Mild Dysplasia' Worst isn\'t moderate Worst isn\'t severe    0     5980
+% 6 Worst isn\'t mild Worst isn\'t moderate Worst isn\'t severe    0     3404
+%               zincset pcent scent cacent fecent nicent cucent zncent pqt sqt caqt feqt
+% 1 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+% 2 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+% 3 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+% 4 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+% 5 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+% 6 Unobserved Elements    NA    NA     NA     NA     NA     NA     NA  NA  NA   NA   NA
+%   niqt cuqt znqt pq1 pq2 pq3 pq4 sq1 sq2 sq3 sq4 caq1 caq2 caq3 caq4 feq1 feq2 feq3 feq4
+% 1   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+% 2   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+% 3   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+% 4   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+% 5   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+% 6   NA   NA   NA  NA  NA  NA  NA  NA  NA  NA  NA   NA   NA   NA   NA   NA   NA   NA   NA
+%   niq1 niq2 niq3 niq4 cuq1 cuq2 cuq3 cuq4 znq1 znq2 znq3 znq4 stdagepill znquartiles
+% 1   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA -0.1818182        <NA>
+% 2   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA  0.0000000        <NA>
+% 3   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA  0.0000000        <NA>
+% 4   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA -1.8181818        <NA>
+% 5   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA -1.8181818        <NA>
+% 6   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA   NA -2.0000000        <NA>
+%   observed
+% 1        0
+% 2        0
+% 3        0
+% 4        0
+% 5        0
+% 6        0
+%
+% Description:
+% 
+%      ‘zinc’ is a data frame, with some variables observed on all
+%      subjects, and some variables not.  The outcome variable is ec01 (renamed to survival_status),
+%      indicating esophageal cancer or not at time futime01 (renamed to survival_time).  The zinc
+%      variables are in zncent (continuous), znqt (ordinal zinc
+%      quartiles), or znquartiles (factor variable notating quartiles of
+%      zinc)
+% 
+%      attributes: 'id8', 'agestr', 'zincset' and 'observed' has been removed
+% Usage:
+% 
+%       data(zinc) 
+%      
+% Format:
+% 
+%      See nested.coxph for example of using this dataset.
+% 
+% Source:
+% 
+%      Steven D. Mark
+% 
+% References:
+% 
+%      Christian C. Abnet, Barry Lai, You-Lin Qiao, Stefan Vogt, Xian-Mao
+%      Luo, Philip R. Taylor, Zhi-Wei Dong, Steven D. Mark, Sanford M.
+%      Dawsey.  Zinc concentration in esophageal biopsies measured by
+%      X-ray fluorescence and cancer risk. Journal of the National Cancer
+%      Institute, 2005; 97(4) 301-306
+% 
+@relation zinc
+
+@attribute sex {Female,Male}
+@attribute agepill numeric
+@attribute smoke {Never,Ever}
+@attribute drink {Never,Ever}
+@attribute anyhist {'No Family History','Family History'}
+@attribute basehist {Normal,Esophagitis,'Mild Dysplasia','Moderate Dysplasia','Severe Dysplasia',NOS,CIS}
+@attribute dysp1 numeric
+@attribute dysp2 numeric
+@attribute mildysp {'Worst isn\'t mild','Mild Dysplasia'}
+@attribute moddysp {'Worst isn\'t moderate','Moderate Dysplasia'}
+@attribute sevdysp {'Worst isn\'t severe','Severe Dysplasia'}
+@attribute survival_status numeric
+@attribute survival_time numeric
+@attribute pcent numeric
+@attribute scent numeric
+@attribute cacent numeric
+@attribute fecent numeric
+@attribute nicent numeric
+@attribute cucent numeric
+@attribute zncent numeric
+@attribute pqt numeric
+@attribute sqt numeric
+@attribute caqt numeric
+@attribute feqt numeric
+@attribute niqt numeric
+@attribute cuqt numeric
+@attribute znqt numeric
+@attribute pq1 numeric
+@attribute pq2 numeric
+@attribute pq3 numeric
+@attribute pq4 numeric
+@attribute sq1 numeric
+@attribute sq2 numeric
+@attribute sq3 numeric
+@attribute sq4 numeric
+@attribute caq1 numeric
+@attribute caq2 numeric
+@attribute caq3 numeric
+@attribute caq4 numeric
+@attribute feq1 numeric
+@attribute feq2 numeric
+@attribute feq3 numeric
+@attribute feq4 numeric
+@attribute niq1 numeric
+@attribute niq2 numeric
+@attribute niq3 numeric
+@attribute niq4 numeric
+@attribute cuq1 numeric
+@attribute cuq2 numeric
+@attribute cuq3 numeric
+@attribute cuq4 numeric
+@attribute znq1 numeric
+@attribute znq2 numeric
+@attribute znq3 numeric
+@attribute znq4 numeric
+@attribute stdagepill numeric
+@attribute znquartiles {Q1,Q2,Q3,Q4}
+
+@data
+Female,52.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.363636,?
+Female,42.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.181818,?
+Female,47.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,4126.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-1.272727,?
+Female,58.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.727273,?
+Female,46.0,Never,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-1.454545,?
+Male,62.0,Ever,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1.454545,?
+Female,55.0,Never,Never,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,238.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.181818,?
+Male,41.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.363636,?
+Male,59.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,1298.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.909091,?
+Female,41.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,2268.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.363636,?
+Male,39.0,Never,Ever,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.727273,?
+Male,52.0,Ever,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.363636,?
+Female,49.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.909091,?
+Female,61.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1.272727,?
+Male,54.0,Ever,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,1155.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.0,?
+Male,52.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.363636,?
+Female,66.0,Never,Never,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,2.181818,?
+Female,49.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.909091,?
+Female,55.0,Never,Never,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.181818,?
+Male,42.0,Ever,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.181818,?
+Female,47.0,Never,Never,?,'Moderate Dysplasia',3.0,1.0,'Worst isn\'t mild','Moderate Dysplasia','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-1.272727,?
+Male,63.0,Ever,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5750.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1.636364,?
+Female,63.0,Never,Never,?,'Moderate Dysplasia',3.0,1.0,'Worst isn\'t mild','Moderate Dysplasia','Worst isn\'t severe',0.0,1089.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1.636364,?
+Female,47.0,Never,Never,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-1.272727,?
+Female,51.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.545455,?
+Female,50.0,Never,Never,?,'Mild Dysplasia',3.0,1.0,'Mild Dysplasia','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-0.727273,?
+Female,56.0,Never,Ever,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.363636,?
+Female,57.0,Never,Never,?,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,3844.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0.545455,?
+Female,39.0,Never,Never,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,-2.727273,?
+Male,62.0,Ever,Ever,?,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,1647.0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1.454545,?
+Male,61.0,Ever,Ever,Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,4236.0,0.32404,0.091338,-1.134668,-0.276974,0.038664,1.198547,-0.124343,3.0,3.0,1.0,2.0,3.0,3.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.272727,Q2
+Male,58.0,Ever,Never,Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,3933.0,-0.083894,0.138532,1.198873,-0.291377,-0.734659,-0.993228,2.029189,2.0,3.0,4.0,1.0,2.0,1.0,3.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.727273,Q3
+Male,63.0,Ever,Ever,No Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,2.494317,0.41891,-0.96858,0.51395,0.183023,-0.660436,1.475261,4.0,4.0,1.0,3.0,3.0,2.0,3.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.636364,Q3
+Male,53.0,Never,Never,Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,1781.0,0.725008,0.216136,1.437762,-0.065914,2.058974,-1.028486,0.038288,3.0,3.0,4.0,2.0,4.0,1.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,-0.181818,Q2
+Male,50.0,Never,Never,Family History,'Mild Dysplasia',3.0,1.0,'Mild Dysplasia','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,-0.076996,0.373672,-0.092324,-0.32689,-0.004048,0.477554,3.600664,2.0,4.0,2.0,1.0,2.0,3.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,-0.727273,Q4
+Female,59.0,Never,Never,Family History,'Mild Dysplasia',3.0,1.0,'Mild Dysplasia','Worst isn\'t moderate','Worst isn\'t severe',1.0,4143.0,0.017703,0.171462,-0.718714,-0.403207,-0.015183,0.955269,2.388549,3.0,3.0,2.0,1.0,2.0,3.0,4.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.909091,Q4
+Female,66.0,Never,Never,No Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,0.397289,-0.012989,2.707511,0.895202,1.434167,-0.783291,-0.322564,3.0,2.0,4.0,4.0,4.0,2.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,2.181818,Q1
+Female,49.0,Never,Never,No Family History,'Mild Dysplasia',3.0,1.0,'Mild Dysplasia','Worst isn\'t moderate','Worst isn\'t severe',0.0,3075.0,-0.242248,-0.333725,-0.871053,-0.278626,0.644019,2.240461,0.290931,2.0,1.0,2.0,2.0,3.0,4.0,3.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,-0.909091,Q3
+Male,59.0,Never,Never,No Family History,'Mild Dysplasia',3.0,1.0,'Mild Dysplasia','Worst isn\'t moderate','Worst isn\'t severe',0.0,680.0,-0.099065,-0.183052,0.063465,0.232753,-1.087206,-0.125557,0.04725,2.0,2.0,3.0,3.0,1.0,2.0,2.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.909091,Q2
+Male,46.0,Never,Never,No Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',0.0,5980.0,0.807774,-0.159271,-0.370173,0.542631,0.026924,1.395392,0.614781,3.0,2.0,2.0,4.0,3.0,4.0,3.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,-1.454545,Q3
+Female,60.0,Never,Never,Family History,Normal,1.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,5893.0,3.824541,0.160584,-1.22083,0.49494,0.133704,0.505054,-0.675478,4.0,3.0,1.0,3.0,3.0,3.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,1.090909,Q1
+Female,62.0,Never,Never,No Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,5674.0,-0.742719,-0.120775,0.13089,0.171401,1.101302,-0.980359,-0.785586,1.0,2.0,3.0,3.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.454545,Q1
+Male,63.0,Never,Never,Family History,Esophagitis,2.0,0.0,'Worst isn\'t mild','Worst isn\'t moderate','Worst isn\'t severe',1.0,1001.0,0.93106,0.104822,-0.105047,-0.016118,1.759148,0.040079,0.926732,3.0,3.0,2.0,2.0,4.0,3.0,3.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.636364,Q3

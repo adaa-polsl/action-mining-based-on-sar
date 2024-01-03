@@ -1,0 +1,24 @@
+Dataset: FD002/8/train.arff
+Number of examples: 233
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 7
+Number of rules without any action in premise: 0
+Conditions count: 21
+Actions count: 21
+"Any" actions count: 4
+Averege conditions per rule: 3.0
+Averege actions per rule: 3.0
+Percent of examples covered by left and right rules: 78.97
+Percent of examples covered by left rule: 93.56
+Percent of examples covered by right rule: 84.55
+
+Rules:
+r1: IF (SensorMeasure6, (-inf, 5.715) -> <5.715, inf)) AND (SensorMeasure4, (-inf, 1129.4299999999998) -> <1048.9699999999998, inf)) THEN (survival_status = {NaN})
+r2: IF (SensorMeasure2, (-inf, 556.0699999999999) -> (-inf, 607.2)) AND (SensorMeasure14, (-inf, 8085.76) -> ANY) AND (SensorMeasure3, <1257.25, inf) -> ANY) AND (SensorMeasure20, (-inf, 14.915) -> (-inf, 24.564999999999998)) AND (SensorMeasure4, (-inf, 1127.985) -> <1127.985, inf)) AND (SensorMeasure15, <9.26385, 10.889949999999999) -> ANY) THEN (survival_status = {NaN})
+r3: IF (SensorMeasure3, <1256.98, inf) -> (-inf, 1584.4299999999998)) AND (SensorMeasure4, (-inf, 1127.935) -> <1127.985, inf)) THEN (survival_status = {NaN})
+r4: IF (SensorMeasure3, <1479.81, inf) -> (-inf, 1352.8600000000001)) AND (OpSet2, <0.2505, inf) -> <0.62165, inf)) AND (SensorMeasure12, (-inf, 372.33000000000004) -> <129.905, inf)) AND (SensorMeasure21, <14.647400000000001, inf) -> <6.2734000000000005, inf)) AND (SensorMeasure8, (-inf, 2324.01) -> ANY) THEN (survival_status = {NaN})
+r5: IF (SensorMeasure3, <1479.975, inf) -> (-inf, 1352.8600000000001)) AND (SensorMeasure20, (-inf, 38.894999999999996) -> (-inf, 14.105)) THEN (survival_status = {NaN})
+r6: IF (SensorMeasure20, (-inf, 14.975000000000001) -> <14.97, inf)) AND (SensorMeasure15, (-inf, 10.886) -> <8.432749999999999, inf)) THEN (survival_status = {NaN})
+r7: IF (OpSet1, <0.00015000000000000001, inf) -> <25.00775, inf)) AND (SensorMeasure3, <1478.85, inf) -> (-inf, 1352.8600000000001)) THEN (survival_status = {NaN})

@@ -1,0 +1,22 @@
+Dataset: whas1/0/train.arff
+Number of examples: 432
+Minimum number of covered examples by rule: 30
+Stable attributes: []
+Position of a target rule: ANY
+Number of rules: 5
+Number of rules without any action in premise: 0
+Conditions count: 13
+Actions count: 13
+"Any" actions count: 0
+Averege conditions per rule: 2.6
+Averege actions per rule: 2.6
+Percent of examples covered by left and right rules: 66.20
+Percent of examples covered by left rule: 90.28
+Percent of examples covered by right rule: 72.92
+
+Rules:
+r1: IF (SHO, <0.5, inf) -> (-inf, 0.5)) AND (CPK, <152.0, inf) -> <100.0, inf)) AND (AGE, (-inf, 91.5) -> (-inf, 74.5)) THEN (survival_status = {NaN})
+r2: IF (CHF, (-inf, 0.5) -> <0.5, inf)) AND (AGE, <28.5, 66.5) -> <78.5, 94.5)) AND (CPK, <33.0, 6072.5) -> <498.0, inf)) THEN (survival_status = {NaN})
+r3: IF (CPK, <51.5, 4710.0) -> <512.0, 4115.5)) AND (AGE, <26.0, 66.5) -> <78.5, 90.5)) THEN (survival_status = {NaN})
+r4: IF (CHF, <0.5, inf) -> (-inf, 0.5)) AND (AGE, <69.5, 94.5) -> (-inf, 67.5)) AND (CPK, <55.5, 998.0) -> <33.0, 4950.0)) THEN (survival_status = {NaN})
+r5: IF (AGE, <69.5, inf) -> (-inf, 67.5)) AND (CPK, <47.0, 4115.5) -> <51.5, 4950.0)) THEN (survival_status = {NaN})

@@ -1,0 +1,191 @@
+% GBSG2 {ipred}
+%
+% The first six rows:
+%
+%   horTh age menostat tsize tgrade pnodes progrec estrec time cens
+% 1    no  70     Post    21     II      3      48     66 1814    1
+% 2   yes  56     Post    12     II      7      61     77 2018    1
+% 3   yes  58     Post    35     II      9      52    271  712    1
+% 4   yes  59     Post    17     II      4      60     29 1807    1
+% 5    no  73     Post    35     II      1      26     65  772    1
+% 6    no  32      Pre    57    III     24       0     13  448    1
+%
+% Description:
+% 
+%      A data frame containing the observations from the GBSG2 study.
+% 
+% Usage:
+% 
+%      data(GBSG2)
+%      
+% Format:
+% 
+%      This data frame contains the observations of 686 women:
+% 
+%      horTh hormonal therapy, a factor at two levels ‘no’ and ‘yes’.
+% 
+%      age of the patients in years.
+% 
+%      menostat menopausal status, a factor at two levels ‘pre’
+%           (premenopausal) and ‘post’ (postmenopausal).
+% 
+%      tsize tumor size (in mm).
+% 
+%      tgrade tumor grade, a ordered factor at levels ‘I < II < III’.
+% 
+%      pnodes number of positive nodes.
+% 
+%      progrec progesterone receptor (in fmol).
+% 
+%      estrec estrogen receptor (in fmol).
+% 
+%      survival_time (previosuly time) recurrence free survival time (in days).
+% 
+%      survival_status (previously cens) censoring indicator (0- censored, 1- event).
+% 
+% Source:
+% 
+%      <URL: http://www.blackwellpublishers.com/rss/Volumes/A162p1.htm>
+% 
+% References:
+% 
+%      M. Schumacher, G. Basert, H. Bojar, K. Huebner, M. Olschewski, W.
+%      Sauerbrei, C. Schmoor, C. Beyerle, R.L.A. Neumann and H.F.
+%      Rauschecker for the German Breast Cancer Study Group (1994),
+%      Randomized 2\times2 trial evaluating hormonal treatment and the
+%      duration of chemotherapy in node-positive breast cancer patients.
+%      _Journal of Clinical Oncology_, *12*, 2086-2093.
+% 
+%      W. Sauerbrei and P. Royston (1999). Building multivariable
+%      prognostic and diagnostic models: transformation of the predictors
+%      by using fractional polynomials. _Journal of the Royal Statistics
+%      Society Series A_, Volume *162*(1), 71-94.
+% 
+% Examples:
+% 
+%      data(GBSG2)
+%      
+%      thsum <- function(x) {
+%        ret <- c(median(x), quantile(x, 0.25), quantile(x,0.75))
+%        names(ret)[1] <- "Median"
+%        ret
+%      }
+%      
+%      t(apply(GBSG2[,c("age", "tsize", "pnodes", 
+%                       "progrec", "estrec")], 2, thsum))
+%      
+%      table(GBSG2$menostat)
+%      table(GBSG2$tgrade)
+%      table(GBSG2$horTh)
+%      
+%      # pooled Kaplan-Meier
+%      
+%      mod <- survfit(Surv(time, cens) ~ 1, data=GBSG2)
+%      # integrated Brier score
+%      sbrier(Surv(GBSG2$time, GBSG2$cens), mod)
+%      # Brier score at 5 years
+%      sbrier(Surv(GBSG2$time, GBSG2$cens), mod, btime=1825)
+%      
+%      # Nottingham prognostic index
+%      
+%      GBSG2 <- GBSG2[order(GBSG2$time),]
+%      
+%      NPI <- 0.2*GBSG2$tsize/10 + 1 + as.integer(GBSG2$tgrade)
+%      NPI[NPI < 3.4] <- 1
+%      NPI[NPI >= 3.4 & NPI <=5.4] <- 2
+%      NPI[NPI > 5.4] <- 3
+%      
+%      mod <- survfit(Surv(time, cens) ~ NPI, data=GBSG2)
+%      plot(mod)
+%      
+%      pred <- c()
+%      survs <- c()
+%      for (i in sort(unique(NPI)))
+%          survs <- c(survs, getsurv(mod[i], 1825))
+%      
+%      for (i in 1:nrow(GBSG2))
+%         pred <- c(pred, survs[NPI[i]])
+%      
+%      # Brier score of NPI at t=5 years
+%      sbrier(Surv(GBSG2$time, GBSG2$cens), pred, btime=1825)
+%      
+@relation GBSG2
+@attribute horTh {'no','yes'}
+@attribute age numeric
+@attribute menostat {'Pre','Post'}
+@attribute tsize numeric
+@attribute tgrade {'I','II','III'}
+@attribute pnodes numeric
+@attribute progrec numeric
+@attribute estrec numeric
+@attribute survival_time numeric
+@attribute survival_status numeric
+@data
+yes,56.0,Post,12.0,II,7.0,61.0,77.0,2018.0,1.0
+no,65.0,Post,16.0,II,1.0,192.0,25.0,2161.0,0.0
+yes,59.0,Post,58.0,II,1.0,154.0,101.0,1840.0,0.0
+no,50.0,Post,27.0,III,1.0,16.0,12.0,1842.0,0.0
+yes,70.0,Post,15.0,II,3.0,89.0,151.0,1693.0,0.0
+no,65.0,Post,52.0,III,7.0,25.0,155.0,1090.0,0.0
+yes,68.0,Post,23.0,II,1.0,27.0,5.0,972.0,0.0
+no,59.0,Post,25.0,I,2.0,33.0,51.0,2438.0,0.0
+yes,61.0,Post,25.0,II,1.0,21.0,172.0,1521.0,1.0
+yes,53.0,Pre,21.0,II,9.0,29.0,9.0,2059.0,0.0
+no,59.0,Post,30.0,II,3.0,0.0,2.0,530.0,1.0
+no,66.0,Post,30.0,II,16.0,0.0,508.0,360.0,1.0
+no,61.0,Post,60.0,II,51.0,45.0,38.0,768.0,0.0
+no,58.0,Post,50.0,II,7.0,77.0,77.0,547.0,1.0
+no,57.0,Post,20.0,II,3.0,39.0,83.0,495.0,1.0
+yes,40.0,Pre,30.0,II,2.0,320.0,30.0,1720.0,0.0
+yes,64.0,Post,26.0,II,5.0,370.0,220.0,570.0,0.0
+no,52.0,Pre,40.0,III,6.0,32.0,5.0,241.0,1.0
+yes,60.0,Post,16.0,II,1.0,184.0,51.0,1352.0,1.0
+no,50.0,Pre,22.0,I,1.0,135.0,111.0,2297.0,0.0
+no,46.0,Pre,30.0,III,1.0,36.0,33.0,940.0,0.0
+yes,72.0,Post,34.0,III,36.0,2.0,1091.0,515.0,1.0
+no,70.0,Post,16.0,II,2.0,126.0,338.0,2388.0,0.0
+yes,47.0,Pre,30.0,II,5.0,12.0,11.0,1463.0,1.0
+yes,52.0,Post,25.0,II,13.0,0.0,0.0,1826.0,0.0
+no,58.0,Post,45.0,III,4.0,0.0,0.0,370.0,1.0
+yes,49.0,Pre,28.0,I,4.0,364.0,120.0,1499.0,0.0
+yes,61.0,Post,24.0,II,2.0,28.0,50.0,1756.0,0.0
+yes,62.0,Post,20.0,II,1.0,11.0,6.0,870.0,0.0
+no,58.0,Post,30.0,III,13.0,7.0,46.0,859.0,1.0
+no,41.0,Pre,34.0,II,10.0,25.0,10.0,740.0,0.0
+no,49.0,Pre,35.0,II,7.0,3.0,0.0,650.0,0.0
+yes,51.0,Pre,34.0,II,3.0,13.0,12.0,1918.0,1.0
+yes,64.0,Post,32.0,II,4.0,402.0,372.0,799.0,1.0
+no,55.0,Post,37.0,II,1.0,82.0,234.0,1105.0,1.0
+no,46.0,Post,20.0,II,11.0,680.0,152.0,1814.0,1.0
+no,51.0,Post,40.0,II,8.0,132.0,64.0,867.0,1.0
+no,43.0,Pre,30.0,II,2.0,32.0,16.0,670.0,1.0
+no,67.0,Post,65.0,II,8.0,0.0,0.0,745.0,1.0
+yes,46.0,Pre,23.0,III,8.0,2.0,1.0,177.0,1.0
+no,47.0,Pre,70.0,II,1.0,51.0,28.0,995.0,0.0
+no,57.0,Post,18.0,II,6.0,74.0,124.0,798.0,0.0
+yes,60.0,Post,25.0,II,7.0,116.0,435.0,2380.0,0.0
+yes,64.0,Post,36.0,II,2.0,122.0,198.0,1679.0,1.0
+no,59.0,Post,27.0,III,20.0,9.0,2.0,624.0,1.0
+no,46.0,Post,20.0,II,2.0,32.0,29.0,2144.0,0.0
+yes,68.0,Post,45.0,I,3.0,31.0,145.0,1905.0,0.0
+no,45.0,Pre,50.0,I,2.0,132.0,200.0,2370.0,0.0
+yes,49.0,Pre,100.0,II,35.0,84.0,24.0,648.0,1.0
+yes,49.0,Post,24.0,II,2.0,120.0,117.0,1818.0,0.0
+no,44.0,Pre,22.0,II,2.0,107.0,94.0,1219.0,1.0
+no,64.0,Post,35.0,I,4.0,858.0,15.0,722.0,0.0
+no,44.0,Pre,40.0,II,4.0,364.0,159.0,651.0,0.0
+no,56.0,Post,31.0,II,1.0,45.0,286.0,1525.0,1.0
+no,37.0,Pre,25.0,III,8.0,9.0,0.0,316.0,1.0
+yes,58.0,Post,25.0,I,1.0,241.0,28.0,432.0,0.0
+no,65.0,Post,22.0,II,8.0,4.0,2.0,65.0,0.0
+no,61.0,Post,18.0,III,4.0,8.0,10.0,29.0,0.0
+no,44.0,Pre,15.0,II,1.0,0.0,0.0,1965.0,0.0
+no,47.0,Pre,20.0,II,1.0,48.0,26.0,2161.0,0.0
+yes,52.0,Post,35.0,II,21.0,11.0,57.0,859.0,1.0
+no,48.0,Pre,60.0,I,4.0,312.0,20.0,982.0,1.0
+no,40.0,Pre,30.0,III,3.0,2.0,16.0,1459.0,0.0
+no,65.0,Post,35.0,II,1.0,7.0,74.0,1192.0,0.0
+no,42.0,Pre,55.0,III,7.0,20.0,20.0,281.0,1.0
+yes,53.0,Post,10.0,II,2.0,217.0,20.0,1818.0,0.0
+yes,60.0,Post,100.0,II,10.0,102.0,88.0,1493.0,1.0
+yes,57.0,Post,36.0,III,1.0,170.0,192.0,1329.0,0.0

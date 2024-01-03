@@ -1,0 +1,5 @@
+- fold=2
+- model=cgbsa
+- dataset=whas500
+- method=km
+- tags=[2023-09-12]

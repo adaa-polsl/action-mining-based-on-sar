@@ -1,0 +1,5 @@
+- fold=1
+- model=cgbsa
+- dataset=actg320
+- method=km
+- tags=[2023-09-12]

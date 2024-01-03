@@ -1,0 +1,5 @@
+- fold=8
+- model=est
+- dataset=bmt-ch
+- method=km
+- tags=[2023-09-12]

@@ -1,0 +1,22 @@
+id,invasion,ici,epicel,ulcer,thick,sex,age
+0,level.2,2.0,present,present,0.97,Male,33.5
+1,level.0,2.0,present,present,5.32,Male,25.0
+2,level.0,2.0,present,present,5.32,Female,65.0
+3,level.1,2.0,not present,present,5.32,Female,56.0
+4,level.1,2.0,present,present,0.97,Female,33.5
+5,level.1,2.0,not present,present,5.32,Female,43.0
+6,level.1,2.0,present,present,0.97,Male,33.5
+7,level.2,1.0,not present,not present,0.97,Female,33.5
+8,level.1,2.0,present,present,5.32,Male,56.0
+9,level.1,2.0,not present,present,0.97,Male,33.5
+10,level.1,2.0,present,present,5.32,Female,63.0
+11,level.1,1.0,not present,present,0.97,Male,33.5
+12,level.0,2.0,not present,present,5.32,Male,64.0
+13,level.0,2.0,not present,present,5.32,Male,49.0
+14,level.0,2.0,present,present,5.32,Female,36.0
+15,level.0,2.0,present,present,5.32,Male,31.0
+16,level.1,2.0,present,present,0.97,Female,33.5
+17,level.0,2.0,not present,present,0.97,Male,33.5
+18,level.0,2.0,present,present,5.32,Female,47.0
+19,level.1,2.0,present,present,5.32,Female,69.0
+20,level.0,2.0,present,present,5.32,Female,42.0

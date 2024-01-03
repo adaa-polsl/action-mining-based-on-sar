@@ -1,0 +1,5 @@
+- fold=7
+- model=csa
+- dataset=bmt-ch
+- method=km
+- tags=[2023-09-12]
