@@ -45,6 +45,7 @@ RULE_FILENAME = "result.txt"
 PRECISION = 6
 
 from scipy.io import arff
+import xml.etree.ElementTree as ET
 
 
 def read_arff(path: str) -> pd.DataFrame:
@@ -67,6 +68,28 @@ def read_arff(path: str) -> pd.DataFrame:
     )
 
     return data_df
+
+
+def get_stable_attributes(xml_path, dataset_name, fold_number):
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+
+    stable_attributes = []
+
+    for dataset in root.find("datasets").findall("dataset"):
+        out_directory = dataset.find("out_directory").text
+        if f"{dataset_name}/{fold_number}" in out_directory:
+            stable_attrs_element = dataset.find("stable_attributes")
+            if stable_attrs_element is not None:
+                stable_attributes = [
+                    attr.text
+                    for attr in stable_attrs_element.findall("stable_attribute")
+                ]
+            else:
+                return None
+            break
+
+    return stable_attributes
 
 
 def process_fold(cfg: DictConfig):
@@ -107,7 +130,9 @@ def process_fold(cfg: DictConfig):
     distribution = ActionRangeDistribution(rules, X_train, y_train)
     distribution.calculate_action_distribution()
     measure = None
-    stable_attributes = None
+    stable_attributes = get_stable_attributes(
+        cfg.paths.config_path, cfg.dataset, cfg.fold
+    )
     meta_table: ActionMetaTable = OptimizedActionMetaTable(
         distribution,
         measure,

@@ -16,9 +16,7 @@ log = logging.getLogger(__name__)
 
 
 class OptimizedActionMetaTable(ActionMetaTable):
-    metaValuesByAttributeLocal: dict[str, set[MetaValue]] = {}
-    metaValuesByAttribute: dict[str, set[MetaValue]] = {}
-    stableAttributes: list[str] = []
+    stable_attributes: list[str] = []
 
     def __init__(
         self,
@@ -79,7 +77,7 @@ class OptimizedActionMetaTable(ActionMetaTable):
         while True:
             attributes: list[str] = list(self.train_set.columns)
             for attribute in attributes:
-                if attribute in self.stableAttributes:
+                if attribute in self.stable_attributes:
                     continue
                 allowed_attributes.add(attribute)
 
